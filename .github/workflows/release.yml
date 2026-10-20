@@ -33,24 +33,24 @@ jobs:
         run: rustup target add aarch64-apple-darwin x86_64-apple-darwin
       - name: Package macOS Universal
         if: runner.os == 'macOS'
-        run: python tools/package_release.py --universal
+        run: python tools/package_release.py --universal --output "${{ runner.temp }}/openfuse-distribution"
       - name: Package Windows and Linux
         if: runner.os != 'macOS'
-        run: python tools/package_release.py
+        run: python tools/package_release.py --output "${{ runner.temp }}/openfuse-distribution"
       - name: Linux graphical launch
         if: runner.os == 'Linux'
         run: |
-          xvfb-run -a timeout 90 target/x86_64-unknown-linux-gnu/release/openfuse-desktop --demo --screenshot target/distribution/linux-editor.png
-          test -s target/distribution/linux-editor.png
+          xvfb-run -a timeout 90 target/x86_64-unknown-linux-gnu/release/openfuse-desktop --demo --screenshot ${{ runner.temp }}/openfuse-distribution/linux-editor.png
+          test -s ${{ runner.temp }}/openfuse-distribution/linux-editor.png
       - uses: actions/upload-artifact@v4
         with:
           name: openfuse-${{ runner.os }}-${{ runner.arch }}
           path: |
-            target/distribution/*.dmg
-            target/distribution/*.tar.gz
-            target/distribution/*.zip
-            target/distribution/release-manifest.json
-            target/distribution/SHA256SUMS
-            target/distribution/*.png
+            ${{ runner.temp }}/openfuse-distribution/*.dmg
+            ${{ runner.temp }}/openfuse-distribution/*.tar.gz
+            ${{ runner.temp }}/openfuse-distribution/*.zip
+            ${{ runner.temp }}/openfuse-distribution/release-manifest.json
+            ${{ runner.temp }}/openfuse-distribution/SHA256SUMS
+            ${{ runner.temp }}/openfuse-distribution/*.png
           if-no-files-found: error
           retention-days: 30
