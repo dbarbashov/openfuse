@@ -4,12 +4,32 @@ use openfuse_device::OperationPhase;
 use std::time::{Duration, Instant};
 
 fn pump(app: &mut Editor, ready: impl Fn(&Editor) -> bool) {
-    let deadline = Instant::now() + Duration::from_secs(12);
-    while Instant::now() < deadline {
+    // A bank operation spans many asynchronous slot reads/writes. Bound
+    // inactivity separately from total duration so a loaded CI host cannot
+    // reject a restore that is still making verified progress.
+    let deadline = Instant::now() + Duration::from_secs(90);
+    let mut last_progress = Instant::now();
+    let mut previous = (
+        app.device.bank.phase,
+        app.device.bank.completed,
+        app.device.operation.phase,
+        app.device.operation.sent,
+    );
+    while Instant::now() < deadline && last_progress.elapsed() < Duration::from_secs(12) {
         app.device.poll();
         app.operation_update();
         if ready(app) {
             return;
+        }
+        let progress = (
+            app.device.bank.phase,
+            app.device.bank.completed,
+            app.device.operation.phase,
+            app.device.operation.sent,
+        );
+        if progress != previous {
+            previous = progress;
+            last_progress = Instant::now();
         }
         std::thread::sleep(Duration::from_millis(5));
     }
