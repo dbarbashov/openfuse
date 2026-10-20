@@ -1,7 +1,6 @@
 use super::*;
 use crate::{Options, session::Session, theme};
 use openfuse_core::mounted_storage::{CollisionPolicy, FileKind};
-#[cfg(unix)]
 use std::path::Path;
 use std::time::{Duration, Instant};
 fn preset() -> String {
@@ -158,11 +157,25 @@ fn explicit_inventory_search_and_selection_do_not_connect_device_or_edit_preset(
             .any(|e| e.kind == FileKind::Phrase && e.name == "recording.raw")
     );
     app.storage_ui.query = "Groove".into();
-    click(&mut app, &ctx, "storage-entry-Audio/Groove.wav");
+    click(
+        &mut app,
+        &ctx,
+        &format!(
+            "storage-entry-{}",
+            Path::new("Audio").join("Groove.wav").display()
+        ),
+    );
     assert_eq!(app.storage_ui.selected.len(), 1);
     app.storage_ui.filter = Some(FileKind::Midi);
     app.storage_ui.query.clear();
-    click(&mut app, &ctx, "storage-entry-Midi/Pattern.mid");
+    click(
+        &mut app,
+        &ctx,
+        &format!(
+            "storage-entry-{}",
+            Path::new("Midi").join("Pattern.mid").display()
+        ),
+    );
     assert_eq!(app.storage_ui.selected.len(), 2);
     assert!(!app.device.has_connection());
     assert_eq!(

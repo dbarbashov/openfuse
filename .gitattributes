@@ -1,6 +1,6 @@
 * text=auto eol=lf
 # Upstream notices are hash-bound: preserve their exact published bytes.
-packaging/third-party/notices/** -text
+packaging/third-party/notices/** -text -whitespace
 *.png binary
 *.gif binary
 *.mp4 binary
