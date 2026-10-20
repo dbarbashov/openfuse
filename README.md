@@ -79,7 +79,7 @@ Gatekeeper globally.
 **Windows:** extract the ZIP, then open `bin/openfuse-desktop.exe`. The build is
 unsigned and Windows may show a reputation warning. The Visual C++ runtime may
 be required. **Linux:** extract the archive and run `bin/openfuse-desktop`.
-Install `libasound2`, `libudev1`, and `libxkbcommon0` if missing. This is a native
+Install `libasound2`, `libudev1`, `libxkbcommon0` and `libxkbcommon-x11-0` if missing. This is a native
 glibc package, not an AppImage. See [installation details](packaging/README.md).
 
 The release also includes SHA256 checksums, platform build manifests and a source

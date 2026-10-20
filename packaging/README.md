@@ -54,7 +54,8 @@ byte-for-byte reproducible.
   document handler, not forcibly made the default. Minimum OS is set by the
   actual Rust build target's deployment target (currently macOS 11 on arm64).
 - Linux: unpack in a stable location and run `bin/openfuse-desktop`. ALSA,
-  libudev, a functioning Wayland/X11 desktop and OpenGL are required. Run
+  libudev, libxkbcommon (including libxkbcommon-x11 on X11), a functioning
+  Wayland/X11 desktop and OpenGL are required. Run
   `python3 register-desktop.py install` explicitly to register the current
   installation for your user; it does not make OpenFUSE the default handler.
   Run `python3 register-desktop.py uninstall` before moving/removing it.
