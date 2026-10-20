@@ -1,0 +1,3 @@
+# Optional administrator-installed rule. Never installed by OpenFUSE.
+# Fender USB HID devices; recognized PID does not imply verified support.
+SUBSYSTEM=="hidraw", ATTRS{idVendor}=="1ed8", TAG+="uaccess"

@@ -1,0 +1,29 @@
+/target/
+/.DS_Store
+**/.DS_Store
+# Proprietary originals and extracted payloads stay local.
+/research/private/
+/research/artifacts/
+/research/extracted/
+*.dmg
+*.pkg
+*.xap
+*.dll
+*.exe
+*.dylib
+# Local Python caches and optional reference-probe build output.
+__pycache__/
+*.pyc
+/tools/*-probe/bin/
+/tools/*-probe/obj/
+
+# Demo video build dependencies and renderer output.
+/tools/demo-video/node_modules/
+/tools/demo-video/dist/
+/tools/demo-video/client/public/screens/
+
+/tools/demo-video/client/public/clips/
+
+# Local-only development archive and agent instructions.
+/research/
+/AGENTS.md

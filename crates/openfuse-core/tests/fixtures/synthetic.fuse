@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Independently authored test fixture. Not a factory preset or hardware profile. -->
+<Preset amplifier="Synthetic research profile" ProductId="65000" FutureFlag="retain-me" xmlns:ext="urn:confuse:test">
+  <Amplifier><Module ID="65001" POS="0"><Param ControlIndex="0">32768</Param><Param ControlIndex="1">12000</Param><ext:Unrecognized value="opaque"/></Module></Amplifier>
+  <FX>
+    <Stompbox ID="1"><Module ID="65002" POS="0" BypassState="1"><Param ControlIndex="0">12000</Param><Param ControlIndex="1">32000</Param></Module></Stompbox>
+    <Modulation ID="2"><Module ID="65003" POS="1"><Param ControlIndex="0">8000</Param><Param ControlIndex="1">21000</Param></Module></Modulation>
+    <Delay ID="3"><Module ID="65004" POS="2"><Param ControlIndex="0">450</Param><Param ControlIndex="1">9000</Param></Module></Delay>
+    <Reverb ID="4"><Module ID="65005" POS="3"><Param ControlIndex="0">16000</Param><Param ControlIndex="1">28000</Param></Module></Reverb>
+  </FX>
+  <Band Type="0" Repeat="1"><SongFile Location="0">example.wav</SongFile><AudioMix>42</AudioMix><Tempo/></Band>
+  <FUSE><Info name="Confuse demo" author="Confuse contributors" tags="synthetic, demo" rating="0" future="untouched">Synthetic preset for offline editing, not hardware use.</Info><PedalColors><Color ID="1">4278190335</Color></PedalColors></FUSE>
+  <FirstExpressionPedal ParameterIndex="3" FutureMode="123"/>
+  <ext:Future><![CDATA[unknown <content>]]></ext:Future>
+</Preset>

@@ -1,0 +1,29 @@
+name: Hardware observation
+description: Report evidence for one exact amplifier and firmware
+body:
+  - type: markdown
+    attributes:
+      value: "Hardware behavior is experimental. Report observations you already have; do not perform risky writes solely to fill this form."
+  - type: input
+    id: model
+    attributes: {label: Exact amplifier model and USB PID}
+    validations: {required: true}
+  - type: input
+    id: firmware
+    attributes: {label: Firmware version (or unknown)}
+    validations: {required: true}
+  - type: input
+    id: environment
+    attributes: {label: OS / architecture / OpenFUSE version}
+    validations: {required: true}
+  - type: textarea
+    id: observations
+    attributes:
+      label: Observed operations and results
+      description: Separate reading, audible behavior, temporary editing, stored writes, power-cycle persistence and restore. State what was not tested.
+    validations: {required: true}
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Redacted evidence
+      description: Acceptance report or minimal normalized trace. Remove personal metadata and serials; never attach firmware, installers or decompiled code.

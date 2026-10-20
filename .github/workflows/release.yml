@@ -1,0 +1,41 @@
+name: Portable packages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [macos-14, ubuntu-22.04, windows-2022]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Linux audio, HID and desktop dependencies
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libasound2-dev libudev-dev pkg-config libxkbcommon-dev
+      - run: python -m unittest discover -s packaging/tests -v
+      - name: Parse explicit Windows association helper
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: '[void][scriptblock]::Create((Get-Content -Raw packaging/windows/register-file-type.ps1))'
+      - run: python tools/package_release.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: openfuse-${{ runner.os }}-${{ runner.arch }}
+          path: |
+            target/distribution/*.dmg
+            target/distribution/*.tar.gz
+            target/distribution/*.zip
+            target/distribution/release-manifest.json
+            target/distribution/SHA256SUMS
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,170 @@
+# Parameter type, encoded choice value, label. Numeric enum identities, not dictionary insertion order.
+129	0	Off
+129	1	On
+130	0	Unison
+130	1	Quadrature
+130	2	Contrary
+131	0	None
+131	1	Full Body
+131	2	Full Stack
+131	3	Razors Edge
+131	4	Bright Light
+131	5	Bass Boost
+131	6	New Metal
+131	7	Super Bright
+132	0	Off
+132	1	Low
+132	2	Mid
+132	3	High
+132	4	Super
+133	0	Tweed Clean
+133	1	Tweed Drive
+133	2	Tweed Dirt
+133	3	BlackfaceCln
+133	4	BlackfaceDrv
+133	5	BlackfaceDst
+133	6	Jazzmaster
+133	7	Garage Rock
+133	8	Garage Punk
+133	9	VeryDistorted
+133	10	Brit Jangle
+133	11	Brit Blues
+133	12	British Steel
+133	13	ModernCrunch
+133	14	Modern Metal
+133	15	Modern Shred
+133	16	HotRod Grit
+133	17	HotRod Lead
+133	18	Acou Dred M
+133	19	Acou Jumbo
+133	20	Acou Dred R
+133	21	Acou Parlor
+135	0	Pre Dist
+135	1	Post Dist
+139	0	1 2 -
+139	1	- 2 3
+139	2	1 - 3
+139	3	1 2 3
+140	0	Sine
+140	1	Triangle
+142	0	Off
+142	1	57DLX
+142	2	BSSMN
+142	3	65DLX
+142	4	65PRN
+142	5	CHAMP
+142	6	4x12M
+142	7	2x12C
+142	8	4x12G
+142	9	65TWN
+142	10	4x12V
+142	11	SS212
+142	12	SS112
+143	0	Less
+143	1	Match
+143	2	More
+144	0	Off
+144	1	Low
+144	2	Mid
+144	3	High
+144	4	Max
+145	0	Off
+145	1	SM57
+145	2	E609
+145	3	R121
+145	4	U87
+145	5	C414
+145	6	SM7
+145	7	421
+147	0	No Cabsim
+147	1	1x10 modern
+147	2	2x10 modern
+147	3	4x10 modern
+147	4	4x10 Hi-Fi
+147	5	8x10 modern
+147	6	8x10 vintage
+147	7	1x12 modern
+147	8	2x15 vintage
+147	9	4x12 modern
+147	10	1x15 vintage
+147	11	1x15 modern
+147	12	1x18 vintage
+147	13	4x10 vintage
+148	0	Off
+148	1	Low 1
+148	2	Low 2
+148	3	Low 3
+148	4	Mid 1
+148	5	Mid 2
+148	6	Mid 3
+148	7	High 1
+148	8	High 2
+148	9	High 3
+148	10	Ultra 1
+148	11	Ultra 2
+148	12	Ultra 3
+149	0	LPF
+149	1	BPF
+149	2	HPF
+150	0	Low Up
+150	1	Low Dn
+150	2	Hi Up
+150	3	Hi Dn
+152	0	-Oct
+152	1	-7th
+152	2	-6th
+152	3	-5th
+152	4	-4th
+152	5	-3rd
+152	6	-2nd
+152	7	+None
+152	8	+2nd
+152	9	+3rd
+152	10	+4th
+152	11	+5th
+152	12	+6th
+152	13	+7th
+152	14	+Oct
+152	15	+9th
+152	16	+10th
+152	17	+11th
+152	18	+12th
+152	19	+13th
+152	20	+14th
+152	21	+Oct2
+153	0	C
+153	1	C#
+153	2	D
+153	3	D#
+153	4	E
+153	5	F
+153	6	F#
+153	7	G
+153	8	G#
+153	9	A
+153	10	A#
+153	11	B
+154	0	MAJOR
+154	1	DORIAN
+154	2	PHRYG
+154	3	LYDIAN
+154	4	MIXO
+154	5	MINOR
+154	6	LOCR
+154	7	HARM
+154	8	MELO
+146	0	Low
+146	1	Mid
+146	2	High
+146	3	Max
+134	0	-96 dB
+134	1	-90 dB
+134	2	-84 dB
+134	3	-78 dB
+134	4	-72 dB
+134	5	-66 dB
+134	6	-60 dB
+134	7	-54 dB
+134	8	-48 dB
+134	9	-42 dB
+134	10	-36 dB

@@ -1,0 +1,2234 @@
+# Original compatibility facts: M family IDs, category, model ID, bypass mode, name, expression parameter index, tap parameter index.
+# P parameter index, physical control index, type, group, XML default, name.
+# Model definitions do not establish validated hardware support.
+M	1,6,7,10,11,13,2259	Amplifier	0	0	None	0	0
+M	10	Amplifier	3	0	Amplifier	0	0
+P	0	0	133	1	3	Amp Type
+P	1	1	1	1	32768	Gain
+P	2	2	1	1	32768	Amp Volume
+P	3	3	4	1	32768	Bass
+P	4	4	1	1	32768	Middle
+P	5	5	1	1	32768	Treble
+P	6	6	132	1	0	Compressor
+P	7	7	131	1	0	Timbre
+P	8	8	132	1	0	Noise Gate
+P	9	9	134	2	32768	Sensitivity
+P	10	10	1	2	32768	Depth
+P	11	11	1	2	32768	Gain
+P	12	12	1	2	32768	Threshold
+P	13	13	4	2	32768	Ratio
+P	14	14	1	2	32768	Attack Time
+P	15	15	1	2	32768	Release Time
+P	16	16	129	2	0	Boost
+P	17	17	135	2	0	Tonestack Position
+M	1,6,7,10,11,13,2259	Distortion	0	0	None	0	0
+M	10	Distortion	60	0	Overdrive	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Gain
+P	2	2	1	1	32767	Low
+P	3	3	1	1	32767	Mid
+P	4	4	1	1	32767	High
+M	10	Distortion	73	0	Fixed Wah	0	0
+P	0	0	1	1	65535	Level
+P	1	1	1	1	12032	Frequency
+P	2	2	1	1	0	Min Freq
+P	3	3	1	1	65535	Max Freq
+P	4	4	1	1	32512	Q
+M	10	Distortion	74	0	Touch Wah	0	0
+P	0	0	1	1	65535	Level
+P	1	1	1	1	42233	Sensitivity
+P	2	2	1	1	32767	Min Freq
+P	3	3	1	1	65535	Max Freq
+P	4	4	1	1	35680	Q
+M	10	Distortion	26	0	Fuzz	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Gain
+P	2	2	1	1	32767	Octave
+P	3	3	1	1	32767	Low
+P	4	4	1	1	32767	High
+M	10	Distortion	28	0	Fuzz Touch Wah	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Gain
+P	2	2	1	1	32767	Sensitivity
+P	3	3	1	1	32767	Octave
+P	4	4	1	1	32767	Peak
+M	1,6,7,10,11,13,2259	Modulation	0	0	None	0	0
+M	10	Modulation	18	0	Sine Chorus	0	0
+P	0	0	1	1	48787	Level
+P	1	1	1	1	1456	Rate
+P	2	2	1	1	24029	Depth
+P	3	3	1	1	21116	Average Delay
+P	4	4	1	1	16019	LR Phase
+M	10	Modulation	19	0	Triangle Chorus	0	0
+P	0	0	1	1	48787	Level
+P	1	1	1	1	2912	Rate
+P	2	2	1	1	18932	Depth
+P	3	3	1	1	20388	Average Delay
+P	4	4	1	1	38592	LR Phase
+M	10	Modulation	24	0	Sine Flanger	0	0
+P	0	0	1	1	56068	Level
+P	1	1	1	1	25485	Rate
+P	2	2	1	1	16019	Depth
+P	3	3	1	1	39321	Feedback
+P	4	4	1	1	26942	LR Phase
+M	10	Modulation	25	0	Triangle Flanger	0	0
+P	0	0	1	1	52427	Level
+P	1	1	1	1	16019	Rate
+P	2	2	1	1	42233	Depth
+P	3	3	1	1	34223	Feedback
+P	4	4	1	1	38592	LR Phase
+M	10	Modulation	45	0	Vibratone	0	0
+P	0	0	1	1	63350	Level
+P	1	1	1	1	65535	Rotor Speed
+P	2	2	1	1	10922	Depth
+P	3	3	1	1	45146	Feedback
+P	4	4	1	1	34223	LR Phase
+M	10	Modulation	64	0	Vintage Tremolo	0	0
+P	0	0	1	1	49151	Level
+P	1	1	1	1	45146	Rate
+P	2	2	1	1	26213	Duty Cycle
+P	3	3	1	1	63350	Attack Time
+P	4	4	1	1	62622	Release Time
+M	10	Modulation	65	0	Sine Tremolo	0	0
+P	0	0	1	1	49151	Level
+P	1	1	1	1	49515	Rate
+P	2	2	1	1	32767	Duty Cycle
+P	3	3	1	1	0	LFO Clipping
+P	4	4	1	1	0	Tri Shaping
+M	10	Modulation	14	0	Alienator	0	0
+P	0	0	1	1	49151	Level
+P	1	1	1	1	29854	Content
+P	2	5	1	1	65535	Tone
+P	3	2	1	1	0	Min Content
+P	4	3	1	1	45874	Max Content
+M	10	Modulation	32	0	Resolver	0	0
+P	0	0	1	1	49151	Level
+P	1	1	1	1	45874	Bit Depth
+P	2	2	1	1	14563	Brightness
+P	3	3	1	1	3640	Attack
+P	4	4	1	1	48787	Release
+M	10	Modulation	34	0	Ring Modulator	0	0
+P	0	0	1	1	49151	Level
+P	1	1	1	1	32767	Frequency
+P	2	2	1	1	32767	Depth
+P	3	3	140	1	0	LFO Shape
+P	4	4	1	1	32767	LFO Phase
+M	10	Modulation	41	0	Step Filter	0	0
+P	0	0	1	1	49151	Level
+P	1	1	1	1	49151	Rate
+P	2	2	1	1	32767	Resonance
+P	3	3	1	1	0	Min Freq
+P	4	4	1	1	32767	Max Freq
+M	10	Modulation	79	0	Phaser	0	0
+P	0	0	1	1	49151	Level
+P	1	1	1	1	32767	Rate
+P	2	2	1	1	32767	Depth
+P	3	3	1	1	32767	Feedback
+P	4	4	140	1	0	LFO Shape
+M	10	Modulation	31	0	Pitch Shifter	0	0
+P	0	0	1	1	49151	Level
+P	1	1	1	1	32767	Pitch
+P	2	2	1	1	32767	Detune
+P	3	3	1	1	32767	Feedback
+P	4	4	1	1	32767	Pre Delay
+M	1,6,7,10,11,13,2259	Delay	0	0	None	0	0
+M	10	Delay	22	0	Mono Delay	0	0
+P	0	0	1	1	29126	Level
+P	1	249	136	1	250	Delay Time
+P	2	2	1	1	18204	Feedback
+P	3	3	1	1	50243	Brightness
+P	4	4	1	1	64078	Attenuation
+M	10	Delay	67	0	Mono Echo Filter	0	0
+P	0	0	1	1	42239	Level
+P	1	249	136	1	300	Delay Time
+P	2	2	1	1	24319	Feedback
+P	3	3	1	1	48383	Frequency
+P	4	4	1	1	33279	Resonance
+P	5	5	1	1	32767	Input Level
+M	10	Delay	72	0	Stereo Echo Filter	0	0
+P	0	0	1	1	48127	Level
+P	1	249	137	1	250	Delay Time
+P	2	2	1	1	44031	Feedback
+P	3	3	1	1	54015	Frequency
+P	4	4	1	1	26879	Resonance
+P	5	5	1	1	32767	Input Level
+M	10	Delay	68	0	Multitap Delay	0	0
+P	0	0	1	1	32767	Level
+P	1	249	138	1	200	Delay Time
+P	2	2	1	1	32767	Feedback
+P	3	3	1	1	32767	Brightness
+P	4	4	139	1	0	Mode
+M	10	Delay	69	0	Ping Pong Delay	0	0
+P	0	0	1	1	32767	Level
+P	1	249	137	1	300	Delay Time
+P	2	2	1	1	32767	Feedback
+P	3	3	1	1	32767	Brightness
+P	4	4	1	1	32767	Stereo
+M	10	Delay	21	0	Ducking Delay	0	0
+P	0	0	1	1	32767	Level
+P	1	249	136	1	350	Delay Time
+P	2	2	1	1	20223	Feedback
+P	3	3	1	1	24063	Release
+P	4	4	1	1	16127	Threshold
+M	10	Delay	70	0	Reverse Delay	0	0
+P	0	0	1	1	32767	Level
+P	1	249	136	1	1100	Delay Time
+P	2	2	1	1	32767	Fwd Fdback
+P	3	3	1	1	32767	Reverse Feedback
+P	4	4	1	1	32767	Tone
+M	10	Delay	43	0	Tape Delay	0	0
+P	0	0	1	1	32767	Level
+P	1	249	136	1	150	Delay Time
+P	2	2	1	1	13106	Feedback
+P	3	3	1	1	26213	Flutter
+P	4	4	1	1	32767	Brightness
+M	10	Delay	42	0	Stereo Tape Delay	0	0
+P	0	0	1	1	32767	Level
+P	1	249	136	1	600	Delay Time
+P	2	2	1	1	48059	Feedback
+P	3	3	1	1	52427	Flutter
+P	4	5	1	1	32767	Separation
+P	5	4	1	2	32767	Brightness
+M	1,6,7,10,11,13,2259	Reverb	0	0	None	0	0
+M	10	Reverb	36	0	Small Hall Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	10	Reverb	58	0	Large Hall Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	10	Reverb	38	0	Small Room Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	10	Reverb	59	0	Large Room Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	10	Reverb	78	0	Small Plate Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	10	Reverb	75	0	Plate Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	10	Reverb	76	0	Ambient Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	10	Reverb	77	0	Arena Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	10	Reverb	33	0	'63 Fender Spring Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	10	Reverb	11	0	'65 Fender Spring Reverb	0	0
+P	0	0	1	1	32767	Level
+P	1	1	1	1	32767	Decay
+P	2	2	1	1	32767	Dwell
+P	3	3	1	1	32767	Diffusion
+P	4	4	1	1	32767	Tone
+M	13	Amplifier	241	13	Studio Preamp	1	0
+P	0	0	12	1	65535	Volume
+P	1	1	12	1	33153	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	33153	Master Volume
+P	4	4	12	1	33153	Treble
+P	5	5	12	1	33153	Middle
+P	6	6	12	1	33153	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	13	NULL
+P	13	13	141	1	13	NULL
+P	14	14	141	1	13	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	0	Cab
+P	18	18	141	1	13	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	63222	NULL
+M	13	Amplifier	124	12	Fender '57 Champ	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	46260	Gain
+P	2	2	12	1	257	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	33153	Treble
+P	5	5	12	1	33153	Middle
+P	6	6	12	1	33153	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	12	NULL
+P	13	13	141	1	12	NULL
+P	14	14	141	1	12	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	5	Cab
+P	18	18	141	1	12	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	61937	NULL
+M	13	Amplifier	103	1	Fender '57 Deluxe	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	39835	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	33153	Master Volume
+P	4	4	12	1	49344	Treble
+P	5	5	12	1	33153	Middle
+P	6	6	12	1	33153	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	1	NULL
+P	13	13	141	1	1	NULL
+P	14	14	141	1	1	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	1	Cab
+P	18	18	141	1	1	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	21331	NULL
+M	13	Amplifier	246	14	Fender '57 Twin	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	20046	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	33153	Master Volume
+P	4	4	12	1	44204	Treble
+P	5	5	12	1	31611	Middle
+P	6	6	12	1	40349	Bass
+P	7	7	12	1	48573	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	14	NULL
+P	13	13	141	1	14	NULL
+P	14	14	141	1	14	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	9	Cab
+P	18	18	141	1	14	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	63993	NULL
+M	13	Amplifier	100	2	Fender '59 Bassman	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	41891	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	33153	Master Volume
+P	4	4	12	1	33153	Treble
+P	5	5	12	1	31611	Middle
+P	6	6	12	1	41891	Bass
+P	7	7	12	1	37522	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	2	NULL
+P	13	13	141	1	2	NULL
+P	14	14	141	1	2	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	2	Cab
+P	18	18	141	1	2	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	26471	NULL
+M	13	Amplifier	106	4	Fender '65 Princeton	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	22102	Gain
+P	2	2	12	1	257	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	39835	Treble
+P	5	5	12	1	52428	Middle
+P	6	6	12	1	19532	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	4	NULL
+P	13	13	141	1	4	NULL
+P	14	14	141	1	4	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	4	Cab
+P	18	18	141	1	4	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	24929	NULL
+M	13	Amplifier	83	3	Fender '65 Deluxe Reverb	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	29555	Gain
+P	2	2	12	1	257	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	37522	Treble
+P	5	5	12	1	53713	Middle
+P	6	6	12	1	14906	Bass
+P	7	7	12	1	257	Presence
+P	8	8	12	1	257	Resonance
+P	9	9	12	1	257	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	257	NULL
+P	12	12	141	1	3	NULL
+P	13	13	141	1	3	NULL
+P	14	14	141	1	3	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	3	Cab
+P	18	18	141	1	3	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	27242	NULL
+M	13	Amplifier	117	5	Fender '65 Twin Reverb	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	22102	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	25700	Master Volume
+P	4	4	12	1	46260	Treble
+P	5	5	12	1	48573	Middle
+P	6	6	12	1	44204	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	5	NULL
+P	13	13	141	1	5	NULL
+P	14	14	141	1	5	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	9	Cab
+P	18	18	141	1	5	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	29298	NULL
+M	13	Amplifier	249	15	'60s Thrift	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	33153	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	33153	Master Volume
+P	4	4	12	1	44204	Treble
+P	5	5	12	1	33153	Middle
+P	6	6	12	1	40349	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	15	NULL
+P	13	13	141	1	15	NULL
+P	14	14	141	1	15	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	1	Cab
+P	18	18	141	1	15	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	64764	NULL
+M	13	Amplifier	255	17	British Watts	1	0
+P	0	0	12	1	47802	Volume
+P	1	1	12	1	40349	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	47802	Treble
+P	5	5	12	1	39064	Middle
+P	6	6	12	1	42662	Bass
+P	7	7	12	1	34695	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	17	NULL
+P	13	13	141	1	17	NULL
+P	14	14	141	1	17	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	10	Cab
+P	18	18	141	1	17	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	0	NULL
+M	13	Amplifier	97	7	British '60s	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	41891	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	25700	Master Volume
+P	4	4	12	1	39835	Treble
+P	5	5	12	1	33153	Middle
+P	6	6	12	1	45489	Bass
+P	7	7	12	1	257	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	7	NULL
+P	13	13	141	1	7	NULL
+P	14	14	141	1	7	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	7	Cab
+P	18	18	141	1	7	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	24158	NULL
+M	13	Amplifier	121	11	British '70s	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	65535	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	32382	Master Volume
+P	4	4	12	1	44204	Treble
+P	5	5	12	1	23644	Middle
+P	6	6	12	1	50629	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	11	NULL
+P	13	13	141	1	11	NULL
+P	14	14	141	1	11	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	8	Cab
+P	18	18	141	1	11	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	31868	NULL
+M	13	Amplifier	94	9	British '80s	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	65535	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	32382	Master Volume
+P	4	4	12	1	44204	Treble
+P	5	5	12	1	23644	Middle
+P	6	6	12	1	50629	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	9	NULL
+P	13	13	141	1	9	NULL
+P	14	14	141	1	9	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	6	Cab
+P	18	18	141	1	9	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	23901	NULL
+M	13	Amplifier	252	16	British Colour	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	35980	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	33153	Master Volume
+P	4	4	12	1	40349	Treble
+P	5	5	12	1	25700	Middle
+P	6	6	12	1	33153	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	16	NULL
+P	13	13	141	1	16	NULL
+P	14	14	141	1	16	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	8	Cab
+P	18	18	141	1	16	Power Supply
+P	19	19	143	1	0	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	65535	NULL
+M	13	Amplifier	114	6	Fender Super-Sonic (Burn)	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	48573	Gain
+P	2	2	12	1	33924	Gain2
+P	3	3	12	1	22102	Master Volume
+P	4	4	12	1	39835	Treble
+P	5	5	12	1	41891	Middle
+P	6	6	12	1	39835	Bass
+P	7	7	12	1	33153	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	6	NULL
+P	13	13	141	1	6	NULL
+P	14	14	141	1	6	NULL
+P	15	15	144	1	2	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	12	Cab
+P	18	18	141	1	6	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	31097	NULL
+M	13	Amplifier	93	10	American '90s	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	36751	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	26471	Master Volume
+P	4	4	12	1	42662	Treble
+P	5	5	12	1	6939	Middle
+P	6	6	12	1	51400	Bass
+P	7	7	12	1	29555	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	10	NULL
+P	13	13	141	1	10	NULL
+P	14	14	141	1	10	NULL
+P	15	15	144	1	3	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	10	Cab
+P	18	18	141	1	10	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	28013	NULL
+M	13	Amplifier	109	8	Metal 2000	1	0
+P	0	0	12	1	44204	Volume
+P	1	1	12	1	42662	Gain
+P	2	2	12	1	33153	Gain2
+P	3	3	12	1	22102	Master Volume
+P	4	4	12	1	39835	Treble
+P	5	5	12	1	20046	Middle
+P	6	6	12	1	37522	Bass
+P	7	7	12	1	36751	Presence
+P	8	8	12	1	33153	Resonance
+P	9	9	12	1	33153	Noise Gate Depth
+P	10	10	13	1	33153	Bias
+P	11	11	12	1	33153	NULL
+P	12	12	141	1	8	NULL
+P	13	13	141	1	8	NULL
+P	14	14	141	1	8	NULL
+P	15	15	144	1	2	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	8	Cab
+P	18	18	141	1	8	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	30069	NULL
+M	13	Distortion	259	1	Ranger Boost	0	8
+P	0	0	1	1	25700	Level
+P	1	1	1	1	47802	Gain
+P	2	3	1	1	257	LoCut
+P	3	2	1	1	39835	Bright
+M	13	Distortion	186	1	Greenbox	0	8
+P	0	0	1	1	33153	Level
+P	1	1	1	1	45489	Gain
+P	2	2	1	1	35980	Tone
+P	3	3	18	1	65535	Blend
+M	13	Distortion	60	1	Overdrive	0	8
+P	0	0	1	1	33153	Level
+P	1	1	1	1	33153	Gain
+P	2	2	1	1	33153	Low
+P	3	3	1	1	33153	Mid
+P	4	4	1	1	33153	High
+M	13	Distortion	26	1	Fuzz	0	8
+P	0	0	1	1	18504	Level
+P	1	1	1	1	33153	Gain
+P	2	2	1	1	44204	Octave
+P	3	3	1	1	40349	Low
+P	4	4	1	1	11308	High
+M	13	Distortion	272	1	Orangebox	0	8
+P	0	0	1	1	33153	Level
+P	1	2	1	1	33153	Dist
+P	2	1	1	1	33153	Tone
+M	13	Distortion	273	1	Blackbox	0	8
+P	0	0	1	1	33153	Level
+P	1	2	1	1	33153	Distortion
+P	2	1	1	1	22102	Filter
+M	13	Distortion	271	1	Big Fuzz	0	8
+P	0	0	1	1	44204	Level
+P	1	1	1	1	44204	Tone
+P	2	2	1	1	29555	Sustain
+M	13	Distortion	73	1	Wah	1	8
+P	0	0	1	1	65535	Mix
+P	1	1	1	1	33153	Frequency
+P	2	2	1	1	257	Heel Freq
+P	3	3	1	1	65535	Toe Freq
+P	4	4	129	1	0	High Q
+M	13	Distortion	74	1	Touch Wah	1	8
+P	0	0	1	1	65535	Mix
+P	1	1	1	1	33153	Sensitivity
+P	2	2	1	1	257	Min Freq
+P	3	3	1	1	65535	Max Freq
+P	4	4	129	1	0	High Q
+M	1,6,7,11,13,2259	Distortion	136	1	Simple Comp	8	8
+P	0	5	146	1	1	Type
+M	1,6,7,13,2259	Distortion	7	1	Compressor	0	8
+P	0	0	1	1	36237	Level
+P	1	1	1	1	3855	Threshold
+P	2	2	4	1	20303	Ratio
+P	3	3	1	1	32639	Attack Time
+P	4	4	1	1	32639	Release Time
+M	13	Modulation	18	1	Sine Chorus	0	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	3855	Rate
+P	2	2	1	1	6939	Depth
+P	3	3	1	1	6939	Average Delay
+P	4	4	1	1	33153	LR Phase
+M	13	Modulation	19	1	Triangle Chorus	0	1
+P	0	0	1	1	24415	Level
+P	1	1	16	1	3855	Rate
+P	2	2	1	1	6939	Depth
+P	3	3	1	1	6939	Average Delay
+P	4	4	1	1	33153	LR Phase
+M	13	Modulation	24	1	Sine Flanger	0	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	3855	Rate
+P	2	2	1	1	33153	Depth
+P	3	3	1	1	33153	Feedback
+P	4	4	1	1	33153	LR Phase
+M	13	Modulation	25	1	Triangle Flanger	0	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	257	Rate
+P	2	2	1	1	65535	Depth
+P	3	3	1	1	13364	Feedback
+P	4	4	1	1	16962	LR Phase
+M	13	Modulation	45	1	Vibratone	1	1
+P	0	0	1	1	63222	Level
+P	1	1	15	1	65535	Rotor Speed
+P	2	2	1	1	10537	Depth
+P	3	3	1	1	44718	Feedback
+P	4	4	1	1	33924	LR Phase
+M	13	Modulation	64	1	Vintage Tremolo	1	1
+P	0	0	1	1	56540	Level
+P	1	1	14	1	44718	Rate
+P	2	2	1	1	25700	Duty Cycle
+P	3	3	1	1	63222	Attack Time
+P	4	4	1	1	62451	Release Time
+M	13	Modulation	65	1	Sine Tremolo	1	1
+P	0	0	1	1	56540	Level
+P	1	1	14	1	39835	Rate
+P	2	2	1	1	32382	Duty Cycle
+P	3	3	1	1	257	LFO Clipping
+P	4	4	1	1	257	Tri Shaping
+M	13	Modulation	34	1	Ring Modulator	1	8
+P	0	0	1	1	65535	Level
+P	1	1	1	1	33153	Frequency
+P	2	2	1	1	33153	Depth
+P	3	3	140	1	0	LFO Shape
+P	4	4	1	1	33153	LFO Phase
+M	13	Modulation	41	1	Step Filter	1	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	33153	Rate
+P	2	2	1	1	33153	Resonance
+P	3	3	1	1	33153	Min Freq
+P	4	4	1	1	33153	Max Freq
+M	13	Modulation	79	1	Phaser	1	1
+P	0	0	1	1	65278	Level
+P	1	1	16	1	257	Rate
+P	2	2	1	1	65278	Depth
+P	3	3	1	1	47802	Feedback
+P	4	4	140	1	0	LFO Shape
+M	13	Modulation	244	1	Wah	1	8
+P	0	0	1	1	65535	Mix
+P	1	1	1	1	33153	Frequency
+P	2	2	1	1	257	Heel Freq
+P	3	3	1	1	65535	Toe Freq
+P	4	4	129	1	0	High Q
+M	13	Modulation	245	1	Touch Wah	1	8
+P	0	0	1	1	60909	Mix
+P	1	1	1	1	33153	Sensitivity
+P	2	2	1	1	1799	Min Freq
+P	3	3	1	1	65535	Max Freq
+P	4	4	129	1	0	High Q
+M	13	Modulation	4127	1	Diatonic Pitch Shifter	0	8
+P	0	0	1	1	22102	Mix
+P	1	11	152	1	9	Pitch
+P	2	2	153	1	4	Key
+P	3	3	154	1	5	Scale
+P	4	7	1	1	51400	Tone
+M	13	Modulation	31	1	Pitch Shifter	1	8
+P	0	0	1	1	22102	Mix
+P	1	1	19	1	16448	Pitch
+P	2	4	1	1	0	Pre Delay
+P	3	5	1	1	0	Feedback
+P	4	7	1	1	51400	Tone
+M	13	Delay	22	1	Mono Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	33153	Delay Time
+P	2	2	1	1	33153	Feedback
+P	3	3	1	1	33153	Brightness
+P	4	4	1	1	33153	Attenuation
+M	13	Delay	67	1	Mono Echo Filter	2	1
+P	0	0	1	1	33153	Level
+P	1	1	6	1	33153	Delay Time
+P	2	2	1	1	33153	Feedback
+P	3	3	1	1	33153	Frequency
+P	4	4	1	1	33153	Resonance
+P	5	5	1	1	65535	Input Level
+M	13	Delay	72	1	Stereo Echo Filter	2	1
+P	0	0	1	1	33153	Level
+P	1	1	7	1	46260	Delay Time
+P	2	2	1	1	33153	Feedback
+P	3	3	1	1	33153	Frequency
+P	4	4	1	1	33153	Resonance
+P	5	5	1	1	65535	Input Level
+M	13	Delay	68	1	Multitap Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	8	1	33153	Delay Time
+P	2	2	1	1	26214	Feedback
+P	3	3	1	1	33153	Brightness
+P	4	4	139	1	2	Mode
+M	13	Delay	69	1	Ping Pong Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	7	1	33153	Delay Time
+P	2	2	1	1	33153	Feedback
+P	3	3	1	1	33153	Brightness
+P	4	4	1	1	33153	Stereo
+M	13	Delay	21	1	Ducking Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	33153	Delay Time
+P	2	2	1	1	33153	Feedback
+P	3	3	1	1	33153	Release
+P	4	4	1	1	33153	Threshold
+M	13	Delay	70	1	Reverse Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	33153	Delay Time
+P	2	2	1	1	33153	FFdbk
+P	3	3	1	1	33153	RFdbk
+P	4	4	1	1	33153	Tone
+M	13	Delay	43	1	Tape Delay	2	1
+P	0	0	1	1	32382	Level
+P	1	1	6	1	7453	Delay Time
+P	2	2	1	1	257	Feedback
+P	3	3	1	1	25700	Flutter
+P	4	4	1	1	33153	Brightness
+P	5	5	1	2	257	Stereo
+M	13	Delay	42	1	Stereo Tape Delay	2	1
+P	0	0	1	1	32382	Level
+P	1	1	6	1	35209	Delay Time
+P	2	2	1	1	7453	Feedback
+P	3	3	1	1	25700	Flutter
+P	4	5	1	1	65535	Separation
+P	5	4	1	2	33153	Brightness
+M	13	Reverb	36	1	Small Hall Reverb	0	8
+P	0	0	1	1	28784	Level
+P	1	1	1	1	24415	Decay
+P	2	2	1	1	28784	Dwell
+P	3	3	1	1	33153	Diffusion
+P	4	4	1	1	37522	Tone
+M	13	Reverb	58	1	Large Hall Reverb	0	8
+P	0	0	1	1	20817	Level
+P	1	1	1	1	16448	Decay
+P	2	2	1	1	33153	Dwell
+P	3	3	1	1	1799	Diffusion
+P	4	4	1	1	45489	Tone
+M	13	Reverb	38	1	Small Room Reverb	0	8
+P	0	0	1	1	33153	Level
+P	1	1	1	1	33153	Decay
+P	2	2	1	1	33153	Dwell
+P	3	3	1	1	33153	Diffusion
+P	4	4	1	1	33153	Tone
+M	13	Reverb	59	1	Large Room Reverb	0	8
+P	0	0	1	1	33153	Level
+P	1	1	1	1	33153	Decay
+P	2	2	1	1	33153	Dwell
+P	3	3	1	1	33153	Diffusion
+P	4	4	1	1	33153	Tone
+M	13	Reverb	78	1	Small Plate Reverb	0	8
+P	0	0	1	1	33153	Level
+P	1	1	1	1	33153	Decay
+P	2	2	1	1	33153	Dwell
+P	3	3	1	1	33153	Diffusion
+P	4	4	1	1	33153	Tone
+M	13	Reverb	75	1	Large Plate Reverb	0	8
+P	0	0	1	1	14906	Level
+P	1	1	1	1	33153	Decay
+P	2	2	1	1	37522	Dwell
+P	3	3	1	1	33153	Diffusion
+P	4	4	1	1	47031	Tone
+M	13	Reverb	76	1	Ambient Reverb	0	8
+P	0	0	1	1	65535	Level
+P	1	1	1	1	33153	Decay
+P	2	2	1	1	33153	Dwell
+P	3	3	1	1	33153	Diffusion
+P	4	4	1	1	33153	Tone
+M	13	Reverb	77	1	Arena Reverb	0	8
+P	0	0	1	1	65535	Level
+P	1	1	1	1	33153	Decay
+P	2	2	1	1	33153	Dwell
+P	3	3	1	1	33153	Diffusion
+P	4	4	1	1	33153	Tone
+M	13	Reverb	33	1	'63 Fender Spring Reverb	0	8
+P	0	0	1	1	33153	Level
+P	1	1	1	1	33153	Decay
+P	2	2	1	1	33153	Dwell
+P	3	3	1	1	33153	Diffusion
+P	4	4	1	1	33153	Tone
+M	13	Reverb	11	1	'65 Fender Spring Reverb	0	8
+P	0	0	1	1	33153	Level
+P	1	1	1	1	35980	Decay
+P	2	2	1	1	19275	Dwell
+P	3	3	1	1	65535	Diffusion
+P	4	4	1	1	33153	Tone
+M	11	Amplifier	150	1	Fender Rumble	1	0
+P	0	0	12	1	59110	Volume
+P	1	1	12	1	0	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	36494	Treble
+P	5	5	12	1	29041	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	1	NULL
+P	13	13	141	1	1	NULL
+P	14	14	141	1	1	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	147	1	3	Cab
+P	18	18	141	1	1	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	127	NULL
+P	21	21	141	1	1	NULL
+P	22	22	148	1	1	Type
+P	23	23	1	1	32896	Level
+P	24	24	1	1	65535	Threshold
+P	25	25	4	1	32896	Ratio
+P	26	26	1	1	32896	Attack
+P	27	27	1	1	32896	Release
+P	28	28	18	1	21845	Blend
+P	29	29	12	1	43690	NULL
+P	30	30	0	1	25700	NULL
+M	11	Amplifier	100	2	Fender '59 Bassman	1	0
+P	0	0	12	1	58339	Volume
+P	1	1	12	1	18247	Gain
+P	2	2	12	1	0	Gain2
+P	3	3	12	1	32896	Master Volume
+P	4	4	12	1	25443	Treble
+P	5	5	12	1	43690	Middle
+P	6	6	12	1	43690	Bass
+P	7	7	12	1	37265	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	2	NULL
+P	13	13	141	1	2	NULL
+P	14	14	141	1	2	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	147	1	13	Cab
+P	18	18	141	1	2	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	127	NULL
+P	21	21	141	1	1	NULL
+P	22	22	148	1	1	Type
+P	23	23	1	1	32896	Level
+P	24	24	1	1	65535	Threshold
+P	25	25	4	1	32896	Ratio
+P	26	26	1	1	32896	Attack
+P	27	27	1	1	32896	Release
+P	28	28	18	1	32896	Blend
+P	29	29	12	1	32896	NULL
+P	30	30	0	1	38807	NULL
+M	11	Amplifier	151	3	Fender Bassman TV	1	0
+P	0	0	12	1	59881	Volume
+P	1	1	12	1	43690	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	25443	Master Volume
+P	4	4	12	1	21845	Treble
+P	5	5	12	1	21845	Middle
+P	6	6	12	1	40092	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	3	NULL
+P	13	13	141	1	3	NULL
+P	14	14	141	1	3	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	147	1	10	Cab
+P	18	18	141	1	3	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	127	NULL
+P	21	21	141	1	1	NULL
+P	22	22	148	1	1	Type
+P	23	23	1	1	32896	Level
+P	24	24	1	1	65535	Threshold
+P	25	25	4	1	32896	Ratio
+P	26	26	1	1	32896	Attack
+P	27	27	1	1	32896	Release
+P	28	28	18	1	65535	Blend
+P	29	29	12	1	32896	NULL
+P	30	30	0	1	39064	NULL
+M	11	Amplifier	152	4	Fender Bassman 300	1	0
+P	0	0	12	1	51143	Volume
+P	1	1	12	1	16962	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	32896	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	4	NULL
+P	13	13	141	1	4	NULL
+P	14	14	141	1	4	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	147	1	5	Cab
+P	18	18	141	1	4	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	127	NULL
+P	21	21	141	1	1	NULL
+P	22	22	148	1	1	Type
+P	23	23	1	1	32896	Level
+P	24	24	1	1	65535	Threshold
+P	25	25	4	1	32896	Ratio
+P	26	26	1	1	32896	Attack
+P	27	27	1	1	32896	Release
+P	28	28	18	1	36494	Blend
+P	29	29	12	1	32896	NULL
+P	30	30	0	1	39321	NULL
+M	11	Amplifier	153	5	SWR Redhead	1	0
+P	0	0	12	1	32896	Volume
+P	1	1	12	1	43690	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	43690	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	25443	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	5	NULL
+P	13	13	141	1	5	NULL
+P	14	14	141	1	5	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	147	1	2	Cab
+P	18	18	141	1	5	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	125	NULL
+P	21	21	141	1	1	NULL
+P	22	22	148	1	1	Type
+P	23	23	1	1	32896	Level
+P	24	24	1	1	65535	Threshold
+P	25	25	4	1	32896	Ratio
+P	26	26	1	1	32896	Attack
+P	27	27	1	1	32896	Release
+P	28	28	18	1	32896	Blend
+P	29	29	12	1	32896	NULL
+P	30	30	0	1	39578	NULL
+M	11	Amplifier	154	6	Rockin' Peg	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	43690	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	40092	Treble
+P	5	5	12	1	18247	Middle
+P	6	6	12	1	40092	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	6	NULL
+P	13	13	141	1	6	NULL
+P	14	14	141	1	6	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	147	1	6	Cab
+P	18	18	141	1	6	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	126	NULL
+P	21	21	141	1	1	NULL
+P	22	22	148	1	1	Type
+P	23	23	1	1	32896	Level
+P	24	24	1	1	65535	Threshold
+P	25	25	4	1	32896	Ratio
+P	26	26	1	1	32896	Attack
+P	27	27	1	1	32896	Release
+P	28	28	18	1	32896	Blend
+P	29	29	12	1	32896	NULL
+P	30	30	0	1	39835	NULL
+M	11	Amplifier	155	7	KGB 800	1	0
+P	0	0	12	1	61937	Volume
+P	1	1	12	1	43690	Gain
+P	2	2	12	1	65535	Gain2
+P	3	3	12	1	43690	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	40092	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	7	NULL
+P	13	13	141	1	7	NULL
+P	14	14	141	1	7	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	147	1	4	Cab
+P	18	18	141	1	7	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	123	NULL
+P	21	21	141	1	1	NULL
+P	22	22	148	1	1	Type
+P	23	23	1	1	32896	Level
+P	24	24	1	1	65535	Threshold
+P	25	25	4	1	32896	Ratio
+P	26	26	1	1	32896	Attack
+P	27	27	1	1	32896	Release
+P	28	28	18	1	32896	Blend
+P	29	29	12	1	32896	NULL
+P	30	30	0	1	48573	NULL
+M	11	Amplifier	189	8	Monster	1	0
+P	0	0	12	1	58339	Volume
+P	1	1	12	1	32896	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	58339	Master Volume
+P	4	4	12	1	21845	Treble
+P	5	5	12	1	18247	Middle
+P	6	6	12	1	43690	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	8	NULL
+P	13	13	141	1	8	NULL
+P	14	14	141	1	8	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	147	1	9	Cab
+P	18	18	141	1	8	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	127	NULL
+P	21	21	141	1	1	NULL
+P	22	22	148	1	1	Type
+P	23	23	1	1	32896	Level
+P	24	24	1	1	65535	Threshold
+P	25	25	4	1	32896	Ratio
+P	26	26	1	1	32896	Attack
+P	27	27	1	1	32896	Release
+P	28	28	18	1	16962	Blend
+P	29	29	12	1	58339	NULL
+P	30	30	0	1	0	NULL
+M	11	Distortion	198	1	Modern Bass Overdrive	0	8
+P	0	0	1	1	21845	Level
+P	1	1	1	1	43690	Drive
+P	2	5	18	1	43690	Blend
+P	3	2	1	1	43690	Bass
+P	4	4	1	1	21845	Treb
+P	5	6	1	1	32896	Pres
+M	11	Distortion	195	1	Overdrive	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	43690	Gain
+P	2	5	18	1	32896	Blend
+P	3	2	1	1	32896	Low
+P	4	3	1	1	21845	Mid
+P	5	4	1	1	21845	High
+M	11	Distortion	196	1	Fuzz	0	8
+P	0	0	1	1	21331	Level
+P	1	1	1	1	43690	Gain
+P	2	2	1	1	0	Octave
+P	3	3	1	1	43690	Low
+P	4	4	1	1	0	High
+P	5	5	18	1	21845	Blend
+M	11	Distortion	186	1	Greenbox	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Gain
+P	2	2	1	1	32896	Tone
+P	3	3	18	1	16962	Blend
+M	11	Modulation	18	1	Sine Chorus	1	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	1285	Rate
+P	2	2	1	1	32896	Depth
+P	3	3	1	1	1285	Average Delay
+P	4	4	1	1	32896	LR Phase
+M	11	Modulation	19	1	Triangle Chorus	1	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	3598	Rate
+P	2	2	1	1	6425	Depth
+P	3	3	1	1	6425	Average Delay
+P	4	4	1	1	32896	LR Phase
+M	11,2259	Modulation	24	1	Sine Flanger	1	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	3598	Rate
+P	2	2	1	1	32896	Depth
+P	3	3	1	1	32896	Feedback
+P	4	4	1	1	32896	LR Phase
+M	11	Modulation	25	1	Triangle Flanger	1	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	0	Rate
+P	2	2	1	1	65535	Depth
+P	3	3	1	1	65535	Feedback
+P	4	4	1	1	32896	LR Phase
+M	11	Modulation	45	1	Vibratone	1	1
+P	0	0	1	1	58339	Level
+P	1	1	15	1	14392	Rotor Speed
+P	2	2	1	1	10023	Depth
+P	3	3	1	1	44461	Feedback
+P	4	4	1	1	33410	LR Phase
+M	11	Modulation	79	1	Phaser	1	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	4369	Rate
+P	2	2	1	1	65021	Depth
+P	3	3	1	1	22616	Feedback
+P	4	4	140	1	0	LFO Shape
+M	1,6,7,11,2259	Modulation	41	1	Step Filter	1	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	32896	Rate
+P	2	2	1	1	32896	Resonance
+P	3	3	1	1	32896	Min Freq
+P	4	4	1	1	32896	Max Freq
+M	11	Modulation	197	1	Envelope Controlled Filter	0	8
+P	0	0	1	1	65535	Level
+P	1	1	150	1	0	Mode
+P	2	2	149	1	1	Filter Type
+P	3	3	1	1	32896	Filter Q
+P	4	4	1	1	32896	Threshold
+M	11	Modulation	188	1	Octave	0	8
+P	0	0	1	1	65535	Direct
+P	1	2	1	1	65535	Octave
+P	2	3	1	1	32896	Sizzle
+M	1,6,7,11	Delay	22	1	Mono Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	32896	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Brightness
+P	4	4	1	1	32896	Attenuation
+M	11	Delay	21	1	Ducking Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	15677	Delay Time
+P	2	2	1	1	27499	Feedback
+P	3	3	1	1	65535	Release
+P	4	4	1	1	0	Threshold
+M	11	Delay	68	1	Multitap Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	8	1	32896	Delay Time
+P	2	2	1	1	0	Feedback
+P	3	3	1	1	32896	Brightness
+P	4	4	139	1	2	Mode
+M	1,6,7,11	Delay	69	1	Ping Pong Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	7	1	32896	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Brightness
+P	4	4	1	1	32896	Stereo
+M	1,6,7,11	Delay	70	1	Reverse Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	32896	Delay Time
+P	2	2	1	1	32896	FFdbk
+P	3	3	1	1	32896	RFdbk
+P	4	4	1	1	32896	Tone
+M	1,6,7,11	Delay	43	1	Tape Delay	2	1
+P	0	0	1	1	32125	Level
+P	1	1	6	1	7196	Delay Time
+P	2	2	1	1	0	Feedback
+P	3	3	1	1	25443	Flutter
+P	4	4	1	1	32896	Brightness
+P	5	5	1	2	0	Stereo
+M	1,6,7,11	Delay	42	1	Stereo Tape Delay	2	1
+P	0	0	1	1	32125	Level
+P	1	1	6	1	34952	Delay Time
+P	2	2	1	1	7196	Feedback
+P	3	3	1	1	25443	Flutter
+P	4	5	1	1	65535	Separation
+P	5	4	1	2	32896	Brightness
+M	11	Delay	67	1	Mono Echo Filter	2	1
+P	0	0	1	1	32896	Level
+P	1	1	6	1	21845	Delay Time
+P	2	2	1	1	21845	Feedback
+P	3	3	1	1	14392	Frequency
+P	4	4	1	1	32896	Resonance
+P	5	5	1	1	65535	Input Level
+M	11	Delay	72	1	Stereo Echo Filter	2	1
+P	0	0	1	1	32896	Level
+P	1	1	7	1	46003	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	14392	Frequency
+P	4	4	1	1	32896	Resonance
+P	5	5	1	1	65535	Input Level
+M	11	Delay	187	1	Pitch Shift Delay	1	8
+P	0	0	1	1	51143	Level
+P	1	1	1	1	15934	Pitch
+P	2	2	1	1	32896	Detune
+P	3	3	1	1	0	Feedback
+P	4	4	1	1	0	Pre Delay
+M	1,6,7,11	Reverb	36	1	Small Hall Reverb	0	8
+P	0	0	1	1	28270	Level
+P	1	1	1	1	23901	Decay
+P	2	2	1	1	28270	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	37265	Tone
+M	1,6,7,11	Reverb	58	1	Large Hall Reverb	0	8
+P	0	0	1	1	20303	Level
+P	1	1	1	1	15934	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	1285	Diffusion
+P	4	4	1	1	45232	Tone
+M	1,6,7,11	Reverb	38	1	Small Room Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	1,6,7,11	Reverb	59	1	Large Room Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	11	Reverb	78	1	Small Plate Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	36494	Decay
+P	2	2	1	1	7196	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	1,6,7,11	Reverb	75	1	Large Plate Reverb	0	8
+P	0	0	1	1	14392	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	37265	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	46774	Tone
+M	1,6,7,11	Reverb	76	1	Ambient Reverb	0	8
+P	0	0	1	1	65535	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	1,6,7,11	Reverb	77	1	Arena Reverb	0	8
+P	0	0	1	1	65535	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	1,6,7,11	Reverb	33	1	'63 Fender Spring Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	1,6,7,11	Reverb	11	1	'65 Fender Spring Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	35723	Decay
+P	2	2	1	1	18761	Dwell
+P	3	3	1	1	65535	Diffusion
+P	4	4	1	1	32896	Tone
+M	1,6,7,2259	Amplifier	103	1	Fender '57 Deluxe	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	39321	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	32896	Master Volume
+P	4	4	12	1	48830	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	1	NULL
+P	13	13	141	1	1	NULL
+P	14	14	141	1	1	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	1	Cab
+P	18	18	141	1	1	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	21331	NULL
+M	1,6,7,2259	Amplifier	100	2	Fender '59 Bassman	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	41634	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	32896	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	31354	Middle
+P	6	6	12	1	41634	Bass
+P	7	7	12	1	37265	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	2	NULL
+P	13	13	141	1	2	NULL
+P	14	14	141	1	2	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	2	Cab
+P	18	18	141	1	2	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	26471	NULL
+M	2259	Amplifier	124	12	Fender '57 Champ	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	46003	Gain
+P	2	2	12	1	0	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	12	NULL
+P	13	13	141	1	12	NULL
+P	14	14	141	1	12	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	5	Cab
+P	18	18	141	1	12	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	60138	NULL
+M	1,6,7,2259	Amplifier	83	3	Fender '65 Deluxe Reverb	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	29041	Gain
+P	2	2	12	1	0	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	37265	Treble
+P	5	5	12	1	53199	Middle
+P	6	6	12	1	14392	Bass
+P	7	7	12	1	0	Presence
+P	8	8	12	1	0	Resonance
+P	9	9	12	1	0	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	0	NULL
+P	12	12	141	1	3	NULL
+P	13	13	141	1	3	NULL
+P	14	14	141	1	3	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	3	Cab
+P	18	18	141	1	3	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	27242	NULL
+M	1,6,7,2259	Amplifier	106	4	Fender '65 Princeton	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	21845	Gain
+P	2	2	12	1	0	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	39321	Treble
+P	5	5	12	1	52428	Middle
+P	6	6	12	1	19532	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	4	NULL
+P	13	13	141	1	4	NULL
+P	14	14	141	1	4	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	4	Cab
+P	18	18	141	1	4	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	24929	NULL
+M	1,6,7,2259	Amplifier	117	5	Fender '65 Twin Reverb	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	21845	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	25443	Master Volume
+P	4	4	12	1	46003	Treble
+P	5	5	12	1	48059	Middle
+P	6	6	12	1	43690	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	5	NULL
+P	13	13	141	1	5	NULL
+P	14	14	141	1	5	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	9	Cab
+P	18	18	141	1	5	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	29298	NULL
+M	1,6,7,2259	Amplifier	114	6	Fender Super-Sonic (Burn)	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	48059	Gain
+P	2	2	12	1	33410	Gain2
+P	3	3	12	1	21845	Master Volume
+P	4	4	12	1	39321	Treble
+P	5	5	12	1	41634	Middle
+P	6	6	12	1	39321	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	6	NULL
+P	13	13	141	1	6	NULL
+P	14	14	141	1	6	NULL
+P	15	15	144	1	2	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	12	Cab
+P	18	18	141	1	6	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	31097	NULL
+M	1,6,7,2259	Amplifier	97	7	British '60s	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	41634	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	25443	Master Volume
+P	4	4	12	1	39321	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	45232	Bass
+P	7	7	12	1	0	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	7	NULL
+P	13	13	141	1	7	NULL
+P	14	14	141	1	7	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	7	Cab
+P	18	18	141	1	7	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	24158	NULL
+M	1,6,7,2259	Amplifier	121	11	British '70s	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	65535	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	32125	Master Volume
+P	4	4	12	1	43690	Treble
+P	5	5	12	1	23387	Middle
+P	6	6	12	1	50372	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	11	NULL
+P	13	13	141	1	11	NULL
+P	14	14	141	1	11	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	8	Cab
+P	18	18	141	1	11	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	31868	NULL
+M	1,6,7,2259	Amplifier	94	9	British '80s	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	65535	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	32125	Master Volume
+P	4	4	12	1	43690	Treble
+P	5	5	12	1	23387	Middle
+P	6	6	12	1	50372	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	9	NULL
+P	13	13	141	1	9	NULL
+P	14	14	141	1	9	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	6	Cab
+P	18	18	141	1	9	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	23901	NULL
+M	1,6,7,2259	Amplifier	93	10	American '90s	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	36494	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	26214	Master Volume
+P	4	4	12	1	42148	Treble
+P	5	5	12	1	6425	Middle
+P	6	6	12	1	51143	Bass
+P	7	7	12	1	29041	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	10	NULL
+P	13	13	141	1	10	NULL
+P	14	14	141	1	10	NULL
+P	15	15	144	1	3	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	10	Cab
+P	18	18	141	1	10	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	28013	NULL
+M	1,6,7,2259	Amplifier	109	8	Metal 2000	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	42148	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	21845	Master Volume
+P	4	4	12	1	39321	Treble
+P	5	5	12	1	19532	Middle
+P	6	6	12	1	37265	Bass
+P	7	7	12	1	36494	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	8	NULL
+P	13	13	141	1	8	NULL
+P	14	14	141	1	8	NULL
+P	15	15	144	1	2	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	8	Cab
+P	18	18	141	1	8	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	30069	NULL
+M	2259	Amplifier	234	13	Fender JazzMaster	1	0
+P	0	0	12	1	32896	Volume
+P	1	1	12	1	32896	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	48830	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	13	NULL
+P	13	13	141	1	13	NULL
+P	14	14	141	1	13	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	3	Cab
+P	18	18	141	1	13	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	0	NULL
+M	2259	Amplifier	235	0	Fender CleanChannel	1	0
+P	0	0	12	1	65535	Volume
+P	1	1	12	1	32896	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	32896	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	0	NULL
+P	13	13	141	1	0	NULL
+P	14	14	141	1	0	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	0	Cab
+P	18	18	141	1	0	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	25700	NULL
+M	1,6,7,2259	Distortion	60	1	Overdrive	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Gain
+P	2	2	1	1	32896	Low
+P	3	3	1	1	32896	Mid
+P	4	4	1	1	32896	High
+M	2259	Distortion	73	1	Fixed Wah	1	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Frequency
+P	2	2	1	1	32896	Min Freq
+P	3	3	1	1	32896	Max Freq
+P	4	4	1	1	32896	Q
+M	2259	Distortion	74	1	Touch Wah	1	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Sensitivity
+P	2	2	1	1	32896	Min Freq
+P	3	3	1	1	32896	Max Freq
+P	4	4	1	1	32896	Q
+M	1,7,2259	Distortion	26	1	Fuzz	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Gain
+P	2	2	1	1	32896	Octave
+P	3	3	1	1	32896	Low
+P	4	4	1	1	32896	High
+M	1,7,2259	Distortion	28	1	Fuzz Touch Wah	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Gain
+P	2	2	1	1	32896	Sensitivity
+P	3	3	1	1	32896	Octave
+P	4	4	1	1	32896	Peak
+M	2259	Modulation	18	1	Sine Chorus	1	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	3598	Rate
+P	2	2	1	1	6425	Depth
+P	3	3	1	1	6425	Average Delay
+P	4	4	1	1	32896	LR Phase
+M	2259	Modulation	19	1	Triangle Chorus	1	1
+P	0	0	1	1	23901	Level
+P	1	1	16	1	3598	Rate
+P	2	2	1	1	6425	Depth
+P	3	3	1	1	6425	Average Delay
+P	4	4	1	1	32896	LR Phase
+M	2259	Modulation	25	1	Triangle Flanger	1	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	0	Rate
+P	2	2	1	1	65535	Depth
+P	3	3	1	1	13107	Feedback
+P	4	4	1	1	16705	LR Phase
+M	1,6,7,2259	Modulation	45	1	Vibratone	1	1
+P	0	0	1	1	62708	Level
+P	1	1	15	1	65535	Rotor Speed
+P	2	2	1	1	10023	Depth
+P	3	3	1	1	44461	Feedback
+P	4	4	1	1	33410	LR Phase
+M	1,6,7,2259	Modulation	64	1	Vintage Tremolo	1	1
+P	0	0	1	1	56283	Level
+P	1	1	14	1	44461	Rate
+P	2	2	1	1	25443	Duty Cycle
+P	3	3	1	1	62708	Attack Time
+P	4	4	1	1	61937	Release Time
+M	1,6,7,2259	Modulation	65	1	Sine Tremolo	1	1
+P	0	0	1	1	56283	Level
+P	1	1	14	1	39321	Rate
+P	2	2	1	1	32125	Duty Cycle
+P	3	3	1	1	0	LFO Clipping
+P	4	4	1	1	0	Tri Shaping
+M	2259	Modulation	34	1	Ring Modulator	1	8
+P	0	0	1	1	65535	Level
+P	1	1	1	1	32896	Frequency
+P	2	2	1	1	32896	Depth
+P	3	3	140	1	128	LFO Shape
+P	4	4	1	1	32896	LFO Phase
+M	1,6,7,2259	Modulation	79	1	Phaser	1	1
+P	0	0	1	1	65021	Level
+P	1	1	16	1	0	Rate
+P	2	2	1	1	65021	Depth
+P	3	3	1	1	47288	Feedback
+P	4	4	140	1	0	LFO Shape
+M	2259	Modulation	31	1	Pitch Shifter	1	8
+P	0	0	1	1	51143	Mix
+P	1	1	19	1	15934	Pitch
+P	2	4	1	1	32896	Pre Delay
+P	3	5	1	1	0	Feedback
+P	4	7	1	1	0	Tone
+M	2259	Delay	22	0	Mono Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	32896	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Brightness
+P	4	4	1	1	32896	Attenuation
+M	2259	Delay	67	0	Mono Echo Filter	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	32896	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Frequency
+P	4	4	1	1	32896	Resonance
+P	5	5	1	1	32896	Input Level
+M	2259	Delay	72	0	Stereo Echo Filter	2	1
+P	0	0	1	1	32896	Level
+P	1	1	7	1	46003	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Frequency
+P	4	4	1	1	32896	Resonance
+P	5	5	1	1	32896	Input Level
+M	2259	Delay	68	0	Multitap Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	8	1	32896	Delay Time
+P	2	2	1	1	26214	Feedback
+P	3	3	1	1	32896	Brightness
+P	4	4	139	1	128	Mode
+M	2259	Delay	69	0	Ping Pong Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	7	1	32896	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Brightness
+P	4	4	1	1	32896	Stereo
+M	2259	Delay	21	0	Ducking Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	32896	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Release
+P	4	4	1	1	32896	Threshold
+M	2259	Delay	70	0	Reverse Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	32896	Delay Time
+P	2	2	1	1	32896	FFdbk
+P	3	3	1	1	32896	RFdbk
+P	4	4	1	1	32896	Tone
+M	2259	Delay	43	0	Tape Delay	2	1
+P	0	0	1	1	32125	Level
+P	1	1	6	1	7196	Delay Time
+P	2	2	1	1	0	Feedback
+P	3	3	1	1	25443	Flutter
+P	4	4	1	1	32896	Brightness
+P	5	5	1	2	0	Stereo
+M	2259	Delay	42	0	Stereo Tape Delay	2	1
+P	0	0	1	1	32125	Level
+P	1	1	6	1	34952	Delay Time
+P	2	2	1	1	7196	Feedback
+P	3	3	1	1	25443	Flutter
+P	4	5	1	1	65535	Separation
+P	5	4	1	2	32896	Brightness
+M	2259	Reverb	36	0	Small Hall Reverb	0	8
+P	0	0	1	1	28270	Level
+P	1	1	1	1	23901	Decay
+P	2	2	1	1	28270	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	37265	Tone
+M	2259	Reverb	58	0	Large Hall Reverb	0	8
+P	0	0	1	1	20303	Level
+P	1	1	1	1	15934	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	1285	Diffusion
+P	4	4	1	1	45232	Tone
+M	2259	Reverb	38	0	Small Room Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	2259	Reverb	59	0	Large Room Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	2259	Reverb	78	0	Small Plate Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	2259	Reverb	75	0	Large Plate Reverb	0	8
+P	0	0	1	1	14392	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	37265	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	46774	Tone
+M	2259	Reverb	76	0	Ambient Reverb	0	8
+P	0	0	1	1	65535	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	2259	Reverb	77	0	Arena Reverb	0	8
+P	0	0	1	1	65535	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	2259	Reverb	33	0	'63 Fender Spring Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	2259	Reverb	11	0	'65 Fender Spring Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	35723	Decay
+P	2	2	1	1	18761	Dwell
+P	3	3	1	1	65535	Diffusion
+P	4	4	1	1	32896	Tone
+M	6	Amplifier	124	12	Fender '57 Champ	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	46003	Gain
+P	2	2	12	1	0	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	12	NULL
+P	13	13	141	1	12	NULL
+P	14	14	141	1	12	NULL
+P	15	15	144	1	1	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	5	Cab
+P	18	18	141	1	12	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	61937	NULL
+M	6	Amplifier	241	13	Studio Preamp	1	0
+P	0	0	12	1	65535	Volume
+P	1	1	12	1	32896	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	32896	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	13	NULL
+P	13	13	141	1	13	NULL
+P	14	14	141	1	13	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	0	Cab
+P	18	18	141	1	13	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	1799	NULL
+M	6	Amplifier	263	0	Natural	1	0
+P	0	0	12	1	65535	Volume
+P	1	1	12	1	32896	NULL
+P	2	2	12	1	32896	NULL
+P	3	3	12	1	32896	NULL
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	String Dynamics
+P	8	8	12	1	14392	NULL
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	NULL
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	0	NULL
+P	13	13	141	1	18	NULL
+P	14	14	141	1	13	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	151	1	0	NULL
+P	18	18	141	1	0	NULL
+P	19	19	143	1	1	NULL
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	2056	NULL
+M	6	Amplifier	264	3	Parlor	1	0
+P	0	0	12	1	65535	Volume
+P	1	1	12	1	32896	NULL
+P	2	2	12	1	32896	NULL
+P	3	3	12	1	32896	NULL
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	String Dynamics
+P	8	8	12	1	14392	NULL
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	NULL
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	3	NULL
+P	13	13	141	1	19	NULL
+P	14	14	141	1	13	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	151	1	0	Pre-Filter
+P	18	18	141	1	0	NULL
+P	19	19	143	1	1	NULL
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	2313	NULL
+M	6	Amplifier	265	3	Dreadnaught	1	0
+P	0	0	12	1	65535	Volume
+P	1	1	12	1	32896	NULL
+P	2	2	12	1	32896	NULL
+P	3	3	12	1	32896	NULL
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	String Dynamics
+P	8	8	12	1	14392	NULL
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	NULL
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	3	NULL
+P	13	13	141	1	20	NULL
+P	14	14	141	1	13	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	151	1	0	Pre-Filter
+P	18	18	141	1	0	NULL
+P	19	19	143	1	1	NULL
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	2570	NULL
+M	6	Amplifier	266	3	Jumbo	1	0
+P	0	0	12	1	65535	Volume
+P	1	1	12	1	32896	NULL
+P	2	2	12	1	32896	NULL
+P	3	3	12	1	32896	NULL
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	String Dynamics
+P	8	8	12	1	14392	NULL
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	NULL
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	3	NULL
+P	13	13	141	1	21	NULL
+P	14	14	141	1	13	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	151	1	0	Pre-Filter
+P	18	18	141	1	0	NULL
+P	19	19	143	1	1	NULL
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	0	NULL
+M	1,6,7	Distortion	73	1	Wah	1	8
+P	0	0	1	1	65535	Mix
+P	1	1	1	1	32896	Frequency
+P	2	2	1	1	0	Heel Freq
+P	3	3	1	1	65535	Toe Freq
+P	4	4	129	1	0	High Q
+M	6	Distortion	74	1	Touch Wah	1	8
+P	0	0	1	1	65535	Mix
+P	1	1	1	1	32896	Sensitivity
+P	2	2	1	1	0	Min Freq
+P	3	3	1	1	65535	Max Freq
+P	4	4	129	1	0	High Q
+M	6	Distortion	26	1	Fuzz	0	8
+P	0	0	1	1	18247	Level
+P	1	1	1	1	32896	Gain
+P	2	2	1	1	43690	Octave
+P	3	3	1	1	40092	Low
+P	4	4	1	1	10794	High
+M	1,6,7	Modulation	18	1	Sine Chorus	0	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	3598	Rate
+P	2	2	1	1	6425	Depth
+P	3	3	1	1	6425	Average Delay
+P	4	4	1	1	32896	LR Phase
+M	1,6,7	Modulation	19	1	Triangle Chorus	0	1
+P	0	0	1	1	23901	Level
+P	1	1	16	1	3598	Rate
+P	2	2	1	1	6425	Depth
+P	3	3	1	1	6425	Average Delay
+P	4	4	1	1	32896	LR Phase
+M	1,6,7	Modulation	24	1	Sine Flanger	0	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	3598	Rate
+P	2	2	1	1	32896	Depth
+P	3	3	1	1	32896	Feedback
+P	4	4	1	1	32896	LR Phase
+M	1,6,7	Modulation	25	1	Triangle Flanger	0	1
+P	0	0	1	1	65535	Level
+P	1	1	16	1	0	Rate
+P	2	2	1	1	65535	Depth
+P	3	3	1	1	13107	Feedback
+P	4	4	1	1	16705	LR Phase
+M	1,6,7	Modulation	34	1	Ring Modulator	1	8
+P	0	0	1	1	65535	Level
+P	1	1	1	1	32896	Frequency
+P	2	2	1	1	32896	Depth
+P	3	3	140	1	0	LFO Shape
+P	4	4	1	1	32896	LFO Phase
+M	6,7	Modulation	244	1	Wah	1	8
+P	0	0	1	1	65535	Mix
+P	1	1	1	1	32896	Frequency
+P	2	2	1	1	0	Heel Freq
+P	3	3	1	1	65535	Toe Freq
+P	4	4	129	1	0	High Q
+M	6	Modulation	245	1	Touch Wah	1	8
+P	0	0	1	1	60652	Mix
+P	1	1	1	1	32896	Sensitivity
+P	2	2	1	1	1285	Min Freq
+P	3	3	1	1	65535	Max Freq
+P	4	4	129	1	0	High Q
+M	6	Delay	67	1	Mono Echo Filter	2	1
+P	0	0	1	1	32896	Level
+P	1	1	6	1	32896	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Frequency
+P	4	4	1	1	32896	Resonance
+P	5	5	1	1	65535	Input Level
+M	6	Delay	72	1	Stereo Echo Filter	2	1
+P	0	0	1	1	32896	Level
+P	1	1	7	1	46003	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Frequency
+P	4	4	1	1	32896	Resonance
+P	5	5	1	1	65535	Input Level
+M	6	Delay	68	1	Multitap Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	8	1	32896	Delay Time
+P	2	2	1	1	26214	Feedback
+P	3	3	1	1	32896	Brightness
+P	4	4	139	1	2	Mode
+M	1,6,7	Delay	21	1	Ducking Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	32896	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Release
+P	4	4	1	1	32896	Threshold
+M	1,6,7	Reverb	78	1	Small Plate Reverb	0	8
+P	0	0	1	1	32896	Level
+P	1	1	1	1	32896	Decay
+P	2	2	1	1	32896	Dwell
+P	3	3	1	1	32896	Diffusion
+P	4	4	1	1	32896	Tone
+M	1,7	Amplifier	124	12	Fender '57 Champ	1	0
+P	0	0	12	1	43690	Volume
+P	1	1	12	1	46003	Gain
+P	2	2	12	1	0	Gain2
+P	3	3	12	1	65535	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	12	NULL
+P	13	13	141	1	12	NULL
+P	14	14	141	1	12	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	5	Cab
+P	18	18	141	1	12	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	61937	NULL
+M	1,7	Distortion	74	1	Touch Wah	1	8
+P	0	0	1	1	65535	Mix
+P	1	1	1	1	32896	Sensitivity
+P	2	2	1	1	0	Heel Freq
+P	3	3	1	1	65535	Toe Freq
+P	4	4	129	1	0	High Q
+M	1,7	Modulation	31	1	Pitch Shifter	1	8
+P	0	0	1	1	51143	Level
+P	1	1	1	1	15934	Pitch
+P	2	2	1	1	32896	Detune
+P	3	3	1	1	0	Feedback
+P	4	4	1	1	0	Pre Delay
+M	1,7	Delay	67	1	Mono Echo Filter	2	1
+P	0	0	1	1	65535	Level
+P	1	1	6	1	32896	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Frequency
+P	4	4	1	1	32896	Resonance
+P	5	5	1	1	32896	Input Level
+M	1,7	Delay	72	1	Stereo Echo Filter	2	1
+P	0	0	1	1	32896	Level
+P	1	1	7	1	46003	Delay Time
+P	2	2	1	1	32896	Feedback
+P	3	3	1	1	32896	Frequency
+P	4	4	1	1	32896	Resonance
+P	5	5	1	1	32896	Input Level
+M	1,7	Delay	68	1	Multitap Delay	2	1
+P	0	0	1	1	65535	Level
+P	1	1	8	1	32896	Delay Time
+P	2	2	1	1	26214	Feedback
+P	3	3	1	1	32896	Brightness
+P	4	4	139	1	128	Mode
+M	7	Amplifier	241	13	Studio Preamp	1	0
+P	0	0	12	1	65535	Volume
+P	1	1	12	1	32896	Gain
+P	2	2	12	1	32896	Gain2
+P	3	3	12	1	32896	Master Volume
+P	4	4	12	1	32896	Treble
+P	5	5	12	1	32896	Middle
+P	6	6	12	1	32896	Bass
+P	7	7	12	1	32896	Presence
+P	8	8	12	1	32896	Resonance
+P	9	9	12	1	32896	Noise Gate Depth
+P	10	10	13	1	32896	Bias
+P	11	11	12	1	32896	NULL
+P	12	12	141	1	13	NULL
+P	13	13	141	1	13	NULL
+P	14	14	141	1	13	NULL
+P	15	15	144	1	0	Noise Gate
+P	16	16	134	1	0	Noise Gate Thresh
+P	17	17	142	1	0	Cab
+P	18	18	141	1	13	Power Supply
+P	19	19	143	1	1	Sag
+P	20	20	141	1	0	NULL
+P	21	21	141	1	1	NULL
+P	22	22	0	1	0	NULL
+M	7	Modulation	245	1	Touch Wah	1	8
+P	0	0	1	1	65535	Mix
+P	1	1	1	1	32896	Sensitivity
+P	2	2	1	1	0	Heel Freq
+P	3	3	1	1	65535	Toe Freq
+P	4	4	129	1	0	High Q

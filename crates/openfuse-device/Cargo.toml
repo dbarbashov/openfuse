@@ -1,0 +1,19 @@
+[package]
+name = "openfuse-device"
+description = "Explicit read sessions for legacy Fender HID amplifiers"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+openfuse-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+sha2 = "0.10"
+tempfile = "3"
+hidapi = { version = "2.6.7", optional = true, default-features = false, features = ["linux-native-basic-udev"] }
+
+[features]
+default = []
+hid = ["dep:hidapi"]

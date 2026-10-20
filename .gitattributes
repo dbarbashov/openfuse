@@ -1,0 +1,2 @@
+# Preserve exact upstream notice bytes, including their original whitespace.
+packaging/third-party/notices/** -whitespace

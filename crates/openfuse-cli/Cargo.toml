@@ -1,0 +1,21 @@
+[package]
+name = "openfuse-cli"
+description = "Offline research CLI for the openfuse amplifier preservation project"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[[bin]]
+name = "openfuse"
+path = "src/main.rs"
+
+[dependencies]
+openfuse-core.workspace = true
+openfuse-device = { path = "../openfuse-device" }
+serde_json.workspace = true
+hidapi = { version = "2.6.7", optional = true, default-features = false, features = ["linux-native-basic-udev"] }
+
+[features]
+default = []
+hid = ["dep:hidapi", "openfuse-device/hid"]
