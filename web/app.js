@@ -48,7 +48,7 @@ try {
   $('open').onclick = () => { $('file').value = ''; $('file').click(); };
   $('file').onchange = () => openFile($('file').files[0]).catch(error);
   $('new').onclick = action(() => { if (discard()) { editor.create(Number($('product').value)); filename = 'Untitled preset.fuse'; status('New preset · download to keep your work'); } });
-  $('example').onclick = action(() => { if (discard()) { editor.example(); filename = 'OpenFUSE example.fuse'; status('Independent example preset'); } });
+  $('example').onclick = action(() => { if (discard()) { editor.example(); $('product').value = '13'; filename = 'OpenFUSE example.fuse'; status('Independent example preset'); } });
   $('undo').onclick = action(() => editor.undo());
   $('redo').onclick = action(() => editor.redo());
   $('download').onclick = action(download);

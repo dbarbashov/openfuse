@@ -24,6 +24,7 @@ def build(output):
         shutil.copyfile(ROOT / "web" / name, output / name)
     subprocess.run(["wasm-bindgen", "--target", "web", "--no-typescript", "--out-dir", str(output / "pkg"),
                     str(ROOT / "target/wasm32-unknown-unknown/release/openfuse_desktop.wasm")], check=True)
+    shutil.copyfile(ROOT / "packaging/openfuse.svg", output / "openfuse.svg")
     for name in ("LICENSE", "THIRD_PARTY.md", "DISCLAIMER.md"):
         shutil.copyfile(ROOT / name, output / name)
     built = {item["package_id"] for line in build_result.stdout.splitlines()

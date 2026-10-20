@@ -88,6 +88,8 @@ physical amplifier compatibility.
 
 ### Web editor
 
+[![OpenFUSE running in a browser](docs/media/web-editor.png)](https://dbarbashov.github.io/openfuse/app/)
+
 [Launch OpenFUSE in your browser](https://dbarbashov.github.io/openfuse/app/).
 The web preview uses the **same Rust preset engine and editor panels** as the
 native application: amplifier/effect controls, Sound, Expression and Details,

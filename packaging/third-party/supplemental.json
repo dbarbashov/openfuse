@@ -683,6 +683,38 @@
           "sha256": "fff01410c955643aaa87161774e9077bc9d7e0afd309a356add0f2e78b2d0e82"
         }
       ]
+    },
+    "accesskit_windows-0.24.1": {
+      "crate_sha256": "24fcd5d23d70670992b823e735e859374d694a3d12bfd8dd32bd3bd8bedb5d81",
+      "vcs_commit": "405d578cdfd8496ee79020d24cfaac8c29a8a48f",
+      "files": [
+        {
+          "file": "notices/AccessKit/accesskit/405d578cdfd8496ee79020d24cfaac8c29a8a48f/LICENSE-APACHE",
+          "url": "https://raw.githubusercontent.com/AccessKit/accesskit/405d578cdfd8496ee79020d24cfaac8c29a8a48f/LICENSE-APACHE",
+          "sha256": "62c7a1e35f56406896d7aa7ca52d0cc0d272ac022b5d2796e7d6905db8a3636a"
+        },
+        {
+          "file": "notices/AccessKit/accesskit/405d578cdfd8496ee79020d24cfaac8c29a8a48f/LICENSE-MIT",
+          "url": "https://raw.githubusercontent.com/AccessKit/accesskit/405d578cdfd8496ee79020d24cfaac8c29a8a48f/LICENSE-MIT",
+          "sha256": "23f18e03dc49df91622fe2a76176497404e46ced8a715d9d2b67a7446571cca3"
+        },
+        {
+          "file": "notices/AccessKit/accesskit/405d578cdfd8496ee79020d24cfaac8c29a8a48f/LICENSE.chromium",
+          "url": "https://raw.githubusercontent.com/AccessKit/accesskit/405d578cdfd8496ee79020d24cfaac8c29a8a48f/LICENSE.chromium",
+          "sha256": "845022e0c1db1abb41a6ba4cd3c4b674ec290f3359d9d3c78ae558d4c0ed9308"
+        }
+      ]
+    },
+    "clipboard-win-5.4.1": {
+      "crate_sha256": "bde03770d3df201d4fb868f2c9c59e66a3e4e2bd06692a0fe701e7103c7e84d4",
+      "vcs_commit": "3b27cf2bfd1adcfa6e0264eb51c1025ddaf0f342",
+      "files": [
+        {
+          "file": "notices/DoumanAsh/clipboard-win/3b27cf2bfd1adcfa6e0264eb51c1025ddaf0f342/LICENSE",
+          "url": "https://raw.githubusercontent.com/DoumanAsh/clipboard-win/3b27cf2bfd1adcfa6e0264eb51c1025ddaf0f342/LICENSE",
+          "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+        }
+      ]
     }
   }
 }

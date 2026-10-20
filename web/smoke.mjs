@@ -35,7 +35,8 @@ try {
   const baseline = await download();
   assert.match(baseline, /Warm room/);
   // Actual canvas gesture changes the amplifier volume in the shared Rust UI.
-  await page.mouse.click(220, 648);
+  const canvas = await page.$eval("#canvas", el => ({x: el.getBoundingClientRect().x, y: el.getBoundingClientRect().y}));
+  await page.mouse.click(canvas.x + 220, canvas.y + 483);
   await new Promise(resolve => setTimeout(resolve, 250));
   const edited = await download();
   assert.notEqual(edited, baseline, 'Canvas slider must change exported XML');
@@ -59,9 +60,9 @@ try {
     assert.match(await download(), new RegExp(`ProductId="${product}"`));
   }
   await page.click('#example');
-  await page.mouse.click(200, 309); // Expression inspector
-  await page.mouse.click(320, 309); // Details inspector
-  await page.mouse.click(80, 309); // Sound inspector
+  await page.mouse.click(canvas.x + 200, canvas.y + 144); // Expression inspector
+  await page.mouse.click(canvas.x + 320, canvas.y + 144); // Details inspector
+  await page.mouse.click(canvas.x + 80, canvas.y + 144); // Sound inspector
   await page.click('#theme');
   await new Promise(resolve => setTimeout(resolve, 300));
   if (process.env.SCREENSHOT_PATH) await page.screenshot({ path: process.env.SCREENSHOT_PATH });
