@@ -1,11 +1,13 @@
 //! File editing state; deliberately independent of windows and USB access.
-use openfuse_core::preset::{
-    MAX_PRESET_BYTES, PresetAnnotations, PresetDocument, PresetMetadata, PresetParameter,
-};
+#[cfg(not(target_arch = "wasm32"))]
+use openfuse_core::preset::MAX_PRESET_BYTES;
+use openfuse_core::preset::{PresetAnnotations, PresetDocument, PresetMetadata, PresetParameter};
+use std::path::PathBuf;
+#[cfg(not(target_arch = "wasm32"))]
 use std::{
     fs::File,
     io::{Read, Write},
-    path::{Path, PathBuf},
+    path::Path,
 };
 
 #[cfg(test)]
@@ -156,6 +158,7 @@ impl Session {
         }
     }
 
+    #[cfg(not(target_arch = "wasm32"))]
     pub fn open(path: &Path) -> Result<Self, String> {
         let file = File::open(path).map_err(|e| format!("Cannot open {}: {e}", path.display()))?;
         let mut bytes = Vec::new();
@@ -425,6 +428,7 @@ impl Session {
         Ok(session)
     }
 
+    #[cfg(not(target_arch = "wasm32"))]
     pub fn save_as(&mut self, path: &Path) -> Result<(), String> {
         if self.conversion_copy && self.path.as_deref() != Some(path) {
             openfuse_core::preset_file::write_new(&self.document, path)

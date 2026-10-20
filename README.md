@@ -10,7 +10,8 @@
 Open, edit and organize legacy Fender FUSE presets. Keep your collection on your
 computer and work offline, without Silverlight, Mono or a Fender account.
 
-[Download v0.1.0](https://github.com/dbarbashov/openfuse/releases/tag/v0.1.0) ·
+[Download v0.1.1](https://github.com/dbarbashov/openfuse/releases/tag/v0.1.1) ·
+[Try the web editor](https://dbarbashov.github.io/openfuse/app/) ·
 [Watch the feature tour](https://dbarbashov.github.io/openfuse/) ·
 [User guide](docs/usage.md) · [Build from source](#build-from-source)
 
@@ -60,17 +61,41 @@ editorial soundtrack is not amplifier audio.
 
 ## Download and install
 
-The [v0.1.0 prerelease](https://github.com/dbarbashov/openfuse/releases/tag/v0.1.0)
-provides an **Apple Silicon macOS DMG**, source archive with vendored Rust
-dependencies, demo video and checksums.
+The [v0.1.1 prerelease](https://github.com/dbarbashov/openfuse/releases/tag/v0.1.1)
+includes the native editor and CLI for all three desktop platforms:
 
-Open the DMG and copy OpenFUSE.app to Applications. The app is ad-hoc signed,
-**not notarized or Developer ID signed**. macOS may require its normal
-Privacy & Security / Open Anyway flow. Only proceed if you trust the source;
-there is no need to disable Gatekeeper globally.
+| Platform | Download | Requirements |
+| --- | --- | --- |
+| macOS Universal | [DMG](https://github.com/dbarbashov/openfuse/releases/download/v0.1.1/openfuse-0.1.1-universal-apple-darwin.dmg) | Intel or Apple Silicon, macOS 11+ |
+| Windows x64 | [ZIP](https://github.com/dbarbashov/openfuse/releases/download/v0.1.1/openfuse-0.1.1-x86_64-pc-windows-msvc.zip) | Windows 10/11, x64 |
+| Linux x64 | [tar.gz](https://github.com/dbarbashov/openfuse/releases/download/v0.1.1/openfuse-0.1.1-x86_64-unknown-linux-gnu.tar.gz) | Ubuntu 22.04+ or compatible glibc system, X11/Wayland and OpenGL |
+| Browser | [Open web editor](https://dbarbashov.github.io/openfuse/app/) | WebAssembly and WebGL; desktop browser recommended |
 
-Linux, Windows and Intel Mac users can build from source. This release does not
-provide validated binaries for those platforms. See [packaging](packaging/README.md).
+**macOS:** open the DMG and copy OpenFUSE.app to Applications. The app is ad-hoc
+signed, **not notarized or Developer ID signed**. Use the normal Privacy &
+Security / Open Anyway flow only if you trust the source; do not disable
+Gatekeeper globally.
+
+**Windows:** extract the ZIP, then open `bin/openfuse-desktop.exe`. The build is
+unsigned and Windows may show a reputation warning. The Visual C++ runtime may
+be required. **Linux:** extract the archive and run `bin/openfuse-desktop`.
+Install `libasound2`, `libudev1`, and `libxkbcommon0` if missing. This is a native
+glibc package, not an AppImage. See [installation details](packaging/README.md).
+
+The release also includes SHA256 checksums, platform build manifests and a source
+archive with vendored Rust dependencies. CI build/package checks do not establish
+physical amplifier compatibility.
+
+### Web editor
+
+[Launch OpenFUSE in your browser](https://dbarbashov.github.io/openfuse/app/).
+The web preview uses the **same Rust preset engine and editor panels** as the
+native application: amplifier/effect controls, Sound, Expression and Details,
+undo/redo, seven preset families, XML import and `.fuse` downloads. Files stay in
+the browser tab and are not uploaded. Download your edits before closing it.
+
+USB, device banks, local libraries and audio playback remain desktop features.
+The web editor does not simulate amplifier audio. See [web build instructions](web/README.md).
 
 ## Build from source
 

@@ -58,7 +58,7 @@ class PackagingTests(unittest.TestCase):
                 if system == "Linux":
                     with tarfile.open(dest) as archive:
                         entry = archive.getmember("openfuse-test/bin/openfuse")
-                        self.assertEqual(entry.mode & 0o111, 0o111)
+                        self.assertEqual(entry.mode & 0o111, binary.stat().st_mode & 0o111)
                         self.assertEqual(archive.extractfile(entry).read(), binary.read_bytes())
                 else:
                     with zipfile.ZipFile(dest) as archive:
@@ -75,6 +75,7 @@ class PackagingTests(unittest.TestCase):
         metadata = {"packages": packages, "resolve": {"nodes": nodes}}
         self.assertEqual([p["name"] for p in package.dependency_packages(metadata)], ["runtime"])
 
+    @unittest.skipIf(__import__("os").name == "nt", "POSIX path names and desktop registration")
     def test_linux_registration_is_opt_in_per_user_and_ownership_checked(self):
         with tempfile.TemporaryDirectory() as temp, mock.patch.object(linux.shutil, "which", return_value=None):
             root = Path(temp) / 'path with % " $ and spaces'
@@ -97,6 +98,7 @@ class PackagingTests(unittest.TestCase):
             self.assertFalse(desktop.exists())
             self.assertFalse((data / "mime/packages/org.openfuse.editor.xml").exists())
 
+    @unittest.skipIf(__import__("os").name == "nt", "POSIX control characters in paths")
     def test_linux_rejects_newline_path_before_registration(self):
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp) / "bad\npath"

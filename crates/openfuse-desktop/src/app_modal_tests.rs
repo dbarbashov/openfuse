@@ -24,6 +24,8 @@ fn modal_frames_keep_insets_and_fit_minimum_window_in_both_themes() {
         ] {
             let ctx = egui::Context::default();
             theme::install(&ctx);
+            // Exercise the portable fallback, including on macOS hosts.
+            ctx.set_fonts(egui::FontDefinitions::default());
             ctx.set_theme(mode);
             let mut options = Options {
                 demo: true,

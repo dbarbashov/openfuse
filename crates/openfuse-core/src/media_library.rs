@@ -27,29 +27,7 @@ fn error(e: impl fmt::Display) -> MediaError {
 fn digest(bytes: &[u8]) -> String {
     format!("{:x}", Sha256::digest(bytes))
 }
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize)]
-pub enum MediaFormat {
-    Wav,
-    Mp3,
-    Midi,
-}
-impl MediaFormat {
-    pub fn from_path(path: &Path) -> Option<Self> {
-        match path.extension()?.to_str()?.to_ascii_lowercase().as_str() {
-            "wav" => Some(Self::Wav),
-            "mp3" => Some(Self::Mp3),
-            "mid" | "midi" => Some(Self::Midi),
-            _ => None,
-        }
-    }
-    pub fn extension(self) -> &'static str {
-        match self {
-            Self::Wav => "wav",
-            Self::Mp3 => "mp3",
-            Self::Midi => "mid",
-        }
-    }
-}
+pub use crate::media_format::MediaFormat;
 #[derive(Debug, Clone)]
 pub struct MediaEntry {
     pub id: String,

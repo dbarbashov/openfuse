@@ -79,10 +79,8 @@ impl Band {
         if filename.is_empty()
             || filename.contains(['/', '\\'])
             || !matches!(
-                crate::media_library::MediaFormat::from_path(std::path::Path::new(filename)),
-                Some(
-                    crate::media_library::MediaFormat::Wav | crate::media_library::MediaFormat::Mp3
-                )
+                crate::media_format::MediaFormat::from_path(std::path::Path::new(filename)),
+                Some(crate::media_format::MediaFormat::Wav | crate::media_format::MediaFormat::Mp3)
             )
         {
             return Err(error("Select a WAV or MP3 basename for PC backing track"));

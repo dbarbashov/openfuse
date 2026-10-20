@@ -13,6 +13,7 @@ import subprocess
 import tarfile
 import tempfile
 import tomllib
+import time
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -280,7 +281,14 @@ def verify_mac_archive(archive):
                     "ad_hoc_signature": "pass", "mounted_cli_help": "pass",
                     "mounted_desktop_help": "pass", "gui_launch": "not tested here"}
         finally:
-            run(["hdiutil", "detach", str(mount)], stdout=subprocess.PIPE)
+            for attempt in range(5):
+                result = subprocess.run(["hdiutil", "detach", str(mount)],
+                                        stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+                if result.returncode == 0:
+                    break
+                if attempt == 4:
+                    raise RuntimeError(f"Cannot detach package verification volume: {mount}")
+                time.sleep(2)
 
 
 def package(output, universal=False):
@@ -345,7 +353,7 @@ def package(output, universal=False):
             slices = [Path(metadata["target_directory"]) / architecture / "release" / stem
                       for architecture in targets]
             run(["lipo", "-create", *map(str, slices), "-output", str(target)])
-            run(["lipo", "-verify_arch", "arm64", "x86_64", str(target)])
+            run(["lipo", str(target), "-verify_arch", "arm64", "x86_64"])
         else:
             shutil.copy2(source, target)
         binary_hashes[stem] = sha256(target)

@@ -667,6 +667,7 @@ fn save_packets(document: &PresetDocument, target: u16) -> Result<Vec<Report64>>
 
 /// Original whole-backup loader constructs a fresh Preset; its global volume
 /// endpoints are zero until the later System message. Never inherit live state.
+#[cfg(not(target_arch = "wasm32"))]
 pub(crate) fn whole_restore_packets(
     pid: u16,
     document: &PresetDocument,

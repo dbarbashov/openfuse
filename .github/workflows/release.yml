@@ -16,12 +16,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
       - name: Linux audio, HID and desktop dependencies
         if: runner.os == 'Linux'
-        run: sudo apt-get update && sudo apt-get install -y libasound2-dev libudev-dev pkg-config libxkbcommon-dev
+        run: sudo apt-get update && sudo apt-get install -y libasound2-dev libudev-dev pkg-config libxkbcommon-dev xvfb libgl1-mesa-dri
       - run: python -m unittest discover -s packaging/tests -v
       - name: Parse explicit Windows association helper
         if: runner.os == 'Windows'
@@ -36,6 +37,11 @@ jobs:
       - name: Package Windows and Linux
         if: runner.os != 'macOS'
         run: python tools/package_release.py
+      - name: Linux graphical launch
+        if: runner.os == 'Linux'
+        run: |
+          xvfb-run -a timeout 90 target/x86_64-unknown-linux-gnu/release/openfuse-desktop --demo --screenshot target/distribution/linux-editor.png
+          test -s target/distribution/linux-editor.png
       - uses: actions/upload-artifact@v4
         with:
           name: openfuse-${{ runner.os }}-${{ runner.arch }}
@@ -45,5 +51,6 @@ jobs:
             target/distribution/*.zip
             target/distribution/release-manifest.json
             target/distribution/SHA256SUMS
+            target/distribution/*.png
           if-no-files-found: error
           retention-days: 30

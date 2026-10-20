@@ -24,11 +24,35 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v6
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+          components: clippy
+      - uses: Swatinem/rust-cache@v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Check browser Rust target
+        run: cargo clippy --locked -p openfuse-desktop --lib --target wasm32-unknown-unknown -- -D warnings
+      - name: Install matching WebAssembly tool
+        run: cargo install wasm-bindgen-cli --version 0.2.129 --locked
+      - name: Build and test the browser editor
+        run: |
+          python3 tools/build_web.py
+          npm ci --prefix web
+          python3 -m http.server 8766 --bind 127.0.0.1 --directory target/web &
+          npm test --prefix web
       - uses: actions/configure-pages@v5
       - name: Preserve public documentation relative links
         run: |
           mkdir _site
           git archive HEAD | tar -x -C _site
+          cp -R target/web _site/app
           touch _site/.nojekyll
           printf '%s\n' '<!doctype html><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=docs/media/"><title>OpenFUSE</title><a href="docs/media/">OpenFUSE demo and screenshots</a>' > _site/index.html
       - uses: actions/upload-pages-artifact@v4

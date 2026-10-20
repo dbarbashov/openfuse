@@ -1,0 +1,7 @@
+{
+  "name": "openfuse-browser-tests",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node smoke.mjs" },
+  "devDependencies": { "puppeteer": "25.13.0" }
+}

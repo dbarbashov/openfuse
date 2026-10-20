@@ -309,6 +309,7 @@ fn transport(
     busy: bool,
 ) -> Option<Action> {
     let mut action = None;
+    ui.spacing_mut().slider_width = (ui.available_width() - 150.0).clamp(80.0, 240.0);
     ui.heading("Local player");
     ui.add(
         egui::Label::new(
@@ -558,6 +559,7 @@ fn band_controls(
 }
 
 fn stored_balance(ui: &mut egui::Ui, raw: &mut u16, enabled: bool) -> bool {
+    ui.spacing_mut().slider_width = (ui.available_width() - 150.0).clamp(80.0, 240.0);
     let mut percent = *raw as f64 * 100.0 / 65535.0;
     let response = ui
         .add_enabled(

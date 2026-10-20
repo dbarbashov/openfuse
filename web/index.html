@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Edit legacy Fender FUSE presets in your browser. Local Rust/WebAssembly processing, no account or uploads.">
+<title>OpenFUSE · Web editor</title>
+<style>
+:root{color-scheme:light dark;--bg:#f6f6f8;--surface:#fff;--ink:#1c1c1e;--muted:#656771;--line:#dddfe4;--blue:#0063da}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}body.dark{--bg:#191a1d;--surface:#2b2c30;--ink:#f2f2f7;--muted:#aeb1b7;--line:#41434b;--blue:#559fff}header{padding:20px 28px 16px;background:var(--surface);box-shadow:0 1px 0 var(--line)}.top,.toolbar{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.top{justify-content:space-between;margin-bottom:16px}h1{font-size:22px;letter-spacing:-.7px;margin:0}h1 span{font-size:12px;letter-spacing:0;font-weight:500;color:var(--muted);margin-left:10px}.links{display:flex;gap:18px}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}button,select,.file{font:inherit;min-height:40px;padding:9px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);cursor:pointer}button:hover,.file:hover{border-color:var(--blue)}button:active,.file:active{transform:scale(.96)}button:disabled,select:disabled{opacity:.45;cursor:wait}.primary{background:var(--blue);color:#fff;border-color:transparent}.separator{height:24px;width:1px;background:var(--line)}.status{color:var(--muted);font-size:12px;margin-left:auto;max-width:420px}#error{color:#b8251f;background:#fff2ef;padding:12px 28px;white-space:pre-wrap}#error:empty{display:none}.notice{padding:10px 28px;color:var(--muted);font-size:12px;border-bottom:1px solid var(--line)}#canvas{display:block;width:100%;height:calc(100dvh - 190px);min-height:500px;touch-action:none}#loading{padding:56px 28px;font-size:18px}footer{padding:12px 28px;color:var(--muted);font-size:12px}button:focus-visible,select:focus-visible,a:focus-visible{outline:3px solid var(--blue);outline-offset:3px}@media(max-width:700px){header{padding:16px}.status{margin-left:0}.links{font-size:12px}.notice{padding:10px 16px}#canvas{height:65dvh}}
+</style>
+</head>
+<body>
+<header>
+<div class="top"><h1>OpenFUSE <span>WEB PREVIEW</span></h1><nav class="links" aria-label="Project"><a href="../docs/media/">Feature tour</a><a href="https://github.com/dbarbashov/openfuse/releases/latest">Desktop downloads</a><a href="https://github.com/dbarbashov/openfuse">Source</a></nav></div>
+<div class="toolbar" aria-label="Preset actions">
+<button id="open" disabled>Open preset…</button><input id="file" type="file" accept=".fuse,.xml" hidden>
+<select id="product" aria-label="New preset family" disabled></select><button id="new" disabled>New</button>
+<button id="example" disabled>Example</button><span class="separator"></span>
+<button id="undo" disabled>Undo</button><button id="redo" disabled>Redo</button><button id="download" class="primary" disabled>Download .fuse</button>
+<button id="theme" aria-label="Toggle dark appearance" disabled>Dark</button>
+<span id="status" class="status" role="status">Loading Rust editor…</span>
+</div>
+</header>
+<div class="notice">Files stay in this browser tab. No uploads, account or amplifier connection. Experimental, AI-assisted software: work on copies. <a href="https://github.com/dbarbashov/openfuse/blob/main/DISCLAIMER.md">Read the disclaimer</a>.</div>
+<div id="error" role="alert"></div><div id="loading">Preparing your workspace…</div>
+<canvas id="canvas" hidden aria-label="Preset editor: Sound, Expression and Details">This editor requires WebAssembly and WebGL. Use the native desktop app if your browser cannot render the editor.</canvas>
+<footer>OpenFUSE 0.1.1 · Same Rust preset engine and editor panels as the desktop app. No DSP simulation, USB, banks, local library or audio playback in this web preview. Download edits before closing the tab. Best on a desktop-sized screen.</footer>
+<script type="module" src="./app.js"></script>
+</body></html>

@@ -29,7 +29,17 @@ Only user-facing installation/usage guides are bundled. Development reports,
 research files and proprietary reference inputs are excluded.
 
 The manifest describes the platform and architecture actually built. Cross
-compilation is not supported by this script. SHA256SUMS covers packaged files;
+compilation is limited to macOS Universal on a macOS host:
+
+```sh
+rustup target add aarch64-apple-darwin x86_64-apple-darwin
+python3 tools/package_release.py --universal
+```
+
+Both executables contain verified arm64 and x86_64 slices, signed after merging.
+The Universal build requires macOS 11 or newer.
+
+SHA256SUMS covers packaged files;
 the outer release manifest covers the final archive and signed application.
 Code signing timestamps and archive metadata mean builds are not advertised as
 byte-for-byte reproducible.
