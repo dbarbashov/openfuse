@@ -464,7 +464,7 @@ fn symlink_sources_roots_entries_and_recovery_markers_are_refused() {
     assert!(catalog.load(&entry).is_err());
 }
 #[test]
-fn bounded_reads_and_replaced_roots_fail_without_catalog_mutation() {
+fn bounded_reads_fail_without_catalog_mutation() {
     let root = tempdir().unwrap();
     let input = tempdir().unwrap();
     let catalog = ArchiveCatalog::open(root.path()).unwrap();
@@ -473,14 +473,30 @@ fn bounded_reads_and_replaced_roots_fail_without_catalog_mutation() {
     out.set_len(4 * 1024 * 1024 + 1).unwrap();
     assert!(catalog.import_file(&file).is_err());
     assert!(catalog.scan().unwrap().entries.is_empty());
+}
+
+#[test]
+fn opened_catalog_root_cannot_be_silently_replaced() {
     let parent = tempdir().unwrap();
     let path = parent.path().join("catalog");
     fs::create_dir(&path).unwrap();
     let moved = ArchiveCatalog::open(&path).unwrap();
-    fs::rename(&path, parent.path().join("old")).unwrap();
-    fs::create_dir(&path).unwrap();
-    assert!(moved.import_backup(&partial(&[2]), "stale").is_err());
-    assert!(fs::read_dir(&path).unwrap().next().is_none());
+    let rename = fs::rename(&path, parent.path().join("old"));
+    // Windows protects the open directory handle itself. Unix permits rename,
+    // so the catalog must reject the replacement by identity before writing.
+    #[cfg(windows)]
+    {
+        assert_eq!(rename.unwrap_err().raw_os_error(), Some(32));
+        assert!(moved.scan().unwrap().entries.is_empty());
+    }
+    #[cfg(not(windows))]
+    rename.unwrap();
+    #[cfg(not(windows))]
+    {
+        fs::create_dir(&path).unwrap();
+        assert!(moved.import_backup(&partial(&[2]), "stale").is_err());
+        assert!(fs::read_dir(&path).unwrap().next().is_none());
+    }
 }
 
 #[test]

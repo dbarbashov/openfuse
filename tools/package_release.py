@@ -283,7 +283,7 @@ def verify_mac_archive(archive):
             run(["hdiutil", "detach", str(mount)], stdout=subprocess.PIPE)
 
 
-def package(output):
+def package(output, universal=False):
     system = platform.system()
     if system not in ("Darwin", "Linux", "Windows"):
         raise ValueError("Supported packaging hosts: macOS, Linux, Windows")
@@ -298,15 +298,23 @@ def package(output):
     # Explicit host target prevents accidental ambient CARGO_BUILD_TARGET cross builds.
     rustc = run(["rustc", "-vV"], capture_output=True).stdout
     host = next(line.split(": ", 1)[1] for line in rustc.splitlines() if line.startswith("host:"))
-    build = run(["cargo", "build", "--release", "--locked", "--features", "hid", "--target", host,
-                 "--message-format=json", "-p", "openfuse-desktop", "-p", "openfuse-cli"],
-                cwd=ROOT, env=build_env, stdout=subprocess.PIPE)
-    artifacts = [json.loads(line) for line in build.stdout.splitlines() if line.startswith("{")]
-    built_packages = {item["package_id"] for item in artifacts
-                      if item.get("reason") == "compiler-artifact"}
+    if universal and system != "Darwin":
+        raise ValueError("Universal packaging requires macOS")
+    targets = ["aarch64-apple-darwin", "x86_64-apple-darwin"] if universal else [host]
+    built_packages = set()
+    metadata = None
+    for target in targets:
+        build = run(["cargo", "build", "--release", "--locked", "--features", "hid", "--target", target,
+                     "--message-format=json", "-p", "openfuse-desktop", "-p", "openfuse-cli"],
+                    cwd=ROOT, env=build_env, stdout=subprocess.PIPE)
+        artifacts = [json.loads(line) for line in build.stdout.splitlines() if line.startswith("{")]
+        built_packages.update(item["package_id"] for item in artifacts
+                              if item.get("reason") == "compiler-artifact")
+    # Unfiltered metadata includes dependencies of both Universal slices;
+    # built_packages restricts notices to artifacts actually built above.
     metadata = json.loads(run(["cargo", "metadata", "--format-version", "1", "--locked",
-                              "--features", "hid", "--filter-platform", host],
-                             cwd=ROOT, capture_output=True).stdout)
+                              "--features", "hid"], cwd=ROOT, capture_output=True).stdout)
+    host = "universal-apple-darwin" if universal else host
     if source_hashes(ROOT) != before:
         raise ValueError("Sources changed during build; rerun packaging with a stable source tree")
     version = tomllib.loads((ROOT / "Cargo.toml").read_text())["workspace"]["package"]["version"]
@@ -333,7 +341,13 @@ def package(output):
     for stem in ("openfuse-desktop", "openfuse"):
         source = built / (stem + suffix)
         target = binaries / source.name
-        shutil.copy2(source, target)
+        if universal:
+            slices = [Path(metadata["target_directory"]) / architecture / "release" / stem
+                      for architecture in targets]
+            run(["lipo", "-create", *map(str, slices), "-output", str(target)])
+            run(["lipo", "-verify_arch", "arm64", "x86_64", str(target)])
+        else:
+            shutil.copy2(source, target)
         binary_hashes[stem] = sha256(target)
         smoke[stem] = run([str(target), "--help"], capture_output=True).stdout
     shutil.copyfile(ROOT / "LICENSE", resources / "LICENSE")
@@ -366,7 +380,7 @@ def package(output):
                 raise ValueError(f"Unresolved native library dependency for {path.name}")
     git = run(["git", "rev-parse", "HEAD"], cwd=ROOT, capture_output=True).stdout.strip()
     provenance = {"schema": "openfuse.portable-build.v1", "version": version,
-        "target": host, "system": system, "git_commit": git,
+        "target": host, "architectures": targets, "system": system, "git_commit": git,
         "git_dirty": bool(run(["git", "status", "--porcelain"], cwd=ROOT,
                               capture_output=True).stdout.strip()),
         "source_sha256": before, "binary_sha256_before_signing": binary_hashes,
@@ -403,9 +417,10 @@ def package(output):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=ROOT / "target/distribution")
+    parser.add_argument("--universal", action="store_true", help="Build both macOS architectures")
     args = parser.parse_args()
     try:
-        result = package(args.output)
+        result = package(args.output, universal=args.universal)
     except (ValueError, OSError, subprocess.CalledProcessError) as error:
         parser.exit(1, f"Packaging failed: {error}\n")
     print(json.dumps({key: result[key] for key in ("archive", "target", "sha256", "bytes")}, indent=2))

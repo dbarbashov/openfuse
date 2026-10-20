@@ -27,7 +27,15 @@ jobs:
         if: runner.os == 'Windows'
         shell: pwsh
         run: '[void][scriptblock]::Create((Get-Content -Raw packaging/windows/register-file-type.ps1))'
-      - run: python tools/package_release.py
+      - name: Install Universal macOS target
+        if: runner.os == 'macOS'
+        run: rustup target add aarch64-apple-darwin x86_64-apple-darwin
+      - name: Package macOS Universal
+        if: runner.os == 'macOS'
+        run: python tools/package_release.py --universal
+      - name: Package Windows and Linux
+        if: runner.os != 'macOS'
+        run: python tools/package_release.py
       - uses: actions/upload-artifact@v4
         with:
           name: openfuse-${{ runner.os }}-${{ runner.arch }}
