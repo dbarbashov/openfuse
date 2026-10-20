@@ -191,7 +191,11 @@ mod unix {
             .unwrap();
         assert!(TransferPlan::upload(&mounted(&root), &[huge]).is_err());
         for name in ["CON.wav", "bad:track.wav", "LPT1.mid"] {
-            assert!(TransferPlan::upload(&mounted(&root), &[source(&local, name, b"x")]).is_err());
+            // Validate names before opening them: Windows cannot create these
+            // paths, and reserved device names must never be opened as fixtures.
+            let error =
+                TransferPlan::upload(&mounted(&root), &[local.path().join(name)]).unwrap_err();
+            assert!(error.to_string().contains("Filename is not portable"));
         }
         assert_eq!(fs::read_dir(root.path()).unwrap().count(), 0);
     }

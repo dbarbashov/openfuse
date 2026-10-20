@@ -154,12 +154,22 @@ fn replaced_root_and_foreign_entries_cannot_be_mutated() {
     let entry = lib.save(&document()).unwrap();
     assert!(other.library().delete(&entry).is_err());
     let old = root.0.with_extension("moved");
-    fs::rename(&root.0, &old).unwrap();
-    fs::create_dir(&root.0).unwrap();
-    assert!(lib.save(&document()).is_err());
-    assert!(lib.delete(&entry).is_err());
-    assert!(lib.scan().is_err());
-    fs::remove_dir_all(old).unwrap();
+    let rename = fs::rename(&root.0, &old);
+    #[cfg(windows)]
+    {
+        assert_eq!(rename.unwrap_err().raw_os_error(), Some(32));
+        assert_eq!(lib.scan().unwrap().entries.len(), 1);
+        assert!(lib.load(&entry).is_ok());
+    }
+    #[cfg(not(windows))]
+    {
+        rename.unwrap();
+        fs::create_dir(&root.0).unwrap();
+        assert!(lib.save(&document()).is_err());
+        assert!(lib.delete(&entry).is_err());
+        assert!(lib.scan().is_err());
+        fs::remove_dir_all(old).unwrap();
+    }
 }
 #[cfg(unix)]
 #[test]

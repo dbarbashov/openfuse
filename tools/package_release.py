@@ -77,7 +77,7 @@ def copy_guides(root, destination):
 
 
 def run(args, **kwargs):
-    return subprocess.run(args, check=True, text=True, **kwargs)
+    return subprocess.run(args, check=True, text=True, encoding="utf-8", **kwargs)
 
 
 def sha256(path):
@@ -399,7 +399,8 @@ def package(output, universal=False):
     write_json(resources / "build-manifest.json", provenance)
     write_checksums(resources)
     if system == "Darwin":
-        for path in binaries.iterdir():
+        # Sign the embedded CLI before the bundle main executable.
+        for path in sorted(binaries.iterdir()):
             run(["codesign", "--force", "--sign", "-", str(path)])
         run(["codesign", "--force", "--sign", "-", str(app)])
         run(["codesign", "--verify", "--deep", "--strict", str(app)])

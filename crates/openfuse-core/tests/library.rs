@@ -275,14 +275,24 @@ fn moved_or_replaced_root_cannot_return_misleading_entry_paths() {
     write(root.join("a.fuse"));
     let library = PresetLibrary::open(&root).unwrap();
     let entry = library.scan().unwrap().entries.remove(0);
-    fs::rename(&root, outer.path().join("moved")).unwrap();
-    fs::create_dir(&root).unwrap();
-    write(root.join("a.fuse"));
-    assert!(library.scan().is_err());
-    assert!(library.read(&entry).is_err());
-    assert!(library.duplicate(&entry).is_err());
-    assert!(library.archive(&entry).is_err());
-    assert!(library.archives().is_err());
+    let rename = fs::rename(&root, outer.path().join("moved"));
+    #[cfg(windows)]
+    {
+        assert_eq!(rename.unwrap_err().raw_os_error(), Some(32));
+        assert_eq!(library.scan().unwrap().entries.len(), 1);
+        assert!(library.read(&entry).is_ok());
+    }
+    #[cfg(not(windows))]
+    {
+        rename.unwrap();
+        fs::create_dir(&root).unwrap();
+        write(root.join("a.fuse"));
+        assert!(library.scan().is_err());
+        assert!(library.read(&entry).is_err());
+        assert!(library.duplicate(&entry).is_err());
+        assert!(library.archive(&entry).is_err());
+        assert!(library.archives().is_err());
+    }
 }
 
 #[test]
